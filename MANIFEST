@@ -1,0 +1,27 @@
+#!mast -x Syckfile bin lib meta qed test [A-Z]*
+lib/euclid/infinity.rb
+lib/euclid/interval.rb
+lib/euclid/math/finance.rb
+lib/euclid/math/miscellaneous.rb
+lib/euclid/math/probability.rb
+lib/euclid/math/trigonometry.rb
+lib/euclid/math.rb
+lib/euclid/matrix/core.rb
+lib/euclid/matrix/exception.rb
+lib/euclid/matrix/givens.rb
+lib/euclid/matrix/hessenberg.rb
+lib/euclid/matrix/householder.rb
+lib/euclid/matrix/jacobi.rb
+lib/euclid/matrix/lu.rb
+lib/euclid/matrix.rb
+lib/euclid/quaternion.rb
+lib/euclid/vector.rb
+lib/euclid.rb
+meta/authors
+meta/name
+meta/repository
+meta/suite
+meta/title
+meta/version
+README
+HISTORY

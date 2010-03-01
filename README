@@ -1,0 +1,15 @@
+=== Extensions to the Ruby's Matrix
+
+Also included are Matrix extensions by Cosmin Bonchis, which was done
+as a Google Summer of Code 2007 project for Ruby Central Inc.
+
+The library consists of some enhancements to the Ruby "Matrix" module
+and includes: LU and QR (Householder, Givens, Gram Schmidt, Hessenberg)
+decompositions, bidiagonalization, eigenvalue and eigenvector calculations.
+
+This library is contatined in stick/matrix.rb, which also draws upon
+stick/mapcar.rb.
+
+This code can also be found on RubyForge at:
+  http://rubyforge.org/project/matrix.
+
