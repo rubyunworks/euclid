@@ -1,8 +1,9 @@
 = Euclid
 
+
 == DESCRIPTION
 
-Euclidis a set of extensions and additions to Ruby's math facilities.
+Euclid is a set of extensions and additions to Ruby's math facilities.
 
 
 == SYNOPSIS
@@ -13,7 +14,7 @@ Euclid include a set of modules that extend Math.
 
 === Matrix and Vector
 
-Euclid includss Matrix and Vecotr extensions by Cosmin Bonchis,
+Euclid includes Matrix and Vector extensions by Cosmin Bonchis,
 which were done for the Google Summer of Code 2007 project for
 Ruby Central Inc.
 
