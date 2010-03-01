@@ -1,15 +1,51 @@
-=== Extensions to the Ruby's Matrix
+= Euclid
 
-Also included are Matrix extensions by Cosmin Bonchis, which was done
-as a Google Summer of Code 2007 project for Ruby Central Inc.
+== DESCRIPTION
 
-The library consists of some enhancements to the Ruby "Matrix" module
-and includes: LU and QR (Householder, Givens, Gram Schmidt, Hessenberg)
+Euclidis a set of extensions and additions to Ruby's math facilities.
+
+
+== SYNOPSIS
+
+=== Math Functions
+
+Euclid include a set of modules that extend Math.
+
+=== Matrix and Vector
+
+Euclid includss Matrix and Vecotr extensions by Cosmin Bonchis,
+which were done for the Google Summer of Code 2007 project for
+Ruby Central Inc.
+
+Unfortunately there were issues with extending Ruby's built-in classes
+so Euclid provides compatible substitutes.
+
+The library includes LU and QR (Householder, Givens, Gram Schmidt, Hessenberg)
 decompositions, bidiagonalization, eigenvalue and eigenvector calculations.
 
-This library is contatined in stick/matrix.rb, which also draws upon
-stick/mapcar.rb.
+This code can also be found on RubyForge at: http://rubyforge.org/project/matrix
 
-This code can also be found on RubyForge at:
-  http://rubyforge.org/project/matrix.
+=== Interval
+
+Euclid provides a true Interval class, which is very similar to the Range
+class, but provides front sentinal inclusion and exclusion.
+
+=== Infinity
+
+Euclid also provides an Infinity class which gracefully handles the normal
+numeric operations. It also supports aleph degress of infinity (though
+not 100% as of yet.)
+
+
+== ADOPTION
+
+This project is up for adoption to anyone who finds it useful and would
+like to take it to the next level.
+
+
+== COPYRIGHT
+
+Copyright (c) 2009 Thomas Sawyer
+
+Distribute under the same terms as Ruby.
 
