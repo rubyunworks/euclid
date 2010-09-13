@@ -1,8 +1,23 @@
-title: Euclid
-suite: rubyworks
-authors: Thomas Sawyer
+title  : Euclid
+suite  : rubyworks
+summary: Math extensions and additions for Ruby
+contact: trans <transfire@gmail.com>
+license: Apache 2.0
+created: 2010-03-01
+
+authors:
+- Thomas Sawyer
+
+description:
+  Euclid is a set of extensions and additions to Ruby's
+  math facilities.
 
 resources:
-  mail: groups.google.com/rubyworks-mailinglist@
+  home: http://rubyworks.github.com/euclid
+  code: http://github.com/rubyworks/euclid
+  mail: http://groups.google.com/rubyworks-mailinglist
   repo: git://github.com/rubyworks/euclid.git
+
+copyright:
+  Copyright (c) 2010 Thomas Sawyer
 
