@@ -2,7 +2,7 @@ module Math #:nodoc:
 
   # = Logarithmic Math Extensions
   #
-  module Logarithmic
+  module Logarithms
     extend self
 
     INVERSE_LN_2 = 1.0 / ::Math.log(2.0)

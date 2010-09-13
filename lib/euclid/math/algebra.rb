@@ -1,13 +1,15 @@
 module Math #:nodoc:
 
-  # = Miscellaneous Math Extensions
+  # = Algebra, Arithmetic and Number Theory Math Extensions
   #
-  # TODO: Rename to ? Arthmetic ? NumberTheory
-  module Miscellaneous
+  # TODO: Rename to Arthmetic or NumberTheory?
+  module Algebra
+
     extend self
 
     GAUSS_FACTOR = ::Math.sqrt(0.5 / Math::PI)
 
+    # First 16 factorials.
     FACTORIALS = [
       1,
       1,
@@ -142,6 +144,6 @@ module Math #:nodoc:
     ##end
   end
 
-  include Miscellaneous
-  extend  Miscellaneous
+  include Algebra
+  extend  Algebra
 end
