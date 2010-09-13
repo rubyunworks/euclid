@@ -1,0 +1,8 @@
+title: Euclid
+suite: rubyworks
+authors: Thomas Sawyer
+
+resources:
+  mail: groups.google.com/rubyworks-mailinglist@
+  repo: git://github.com/rubyworks/euclid.git
+

@@ -1,5 +1,5 @@
-.cache
 pkg
 log
-doc/rdoc
-doc/ri
+doc
+ri
+tmp

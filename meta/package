@@ -1,0 +1,8 @@
+name    : euclid
+date    : 2010-09-12
+version : 0.1.0
+
+requires:
+- syckle (build)
+- qed    (test)
+
