@@ -1,0 +1,1509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+  <title>Module: Math::Trigonometry</title>
+
+  
+    <link rel="SHORTCUT ICON" href="../assets/icon/module.png">
+  
+
+  <link type="text/css" rel="stylesheet" href="../assets/rdoc.css" media="screen" />
+  <link type="text/css" rel="stylesheet" href="../assets/highlight/styles/github.css" title="GitHub" />
+
+  <script type="text/javascript" charset="utf-8" src="../assets/jquery.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../assets/highlight/highlight.pack.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../assets/quicksearch.js"></script>
+  <script type="text/javascript" charset="utf-8" src="../assets/main.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready( function() {
+      $('#documentation pre').wrapInner('<code></code>');
+      hljs.tabReplace = '    ';
+      hljs.initHighlightingOnLoad('ruby');
+
+	    hookSourceViews();
+	    hookDebuggingToggle();
+	    hookQuickSearch();
+	    highlightLocationTarget();
+
+	    $('ul.link-list a').bind( "click", highlightClickTarget );
+    });
+  </script>
+</head>
+<body class="module">
+<div id="main">
+
+  <div class="head">
+    <h1>
+      
+        <img src="../assets/icon/module.png" align="absmiddle">&nbsp;
+      
+      <a href="../index.html">Euclid</a>&nbsp;
+      <a href="/">Math::Trigonometry</a>
+    </h1>
+  </div>
+
+  <div id="metadata">
+    <div id="project-metadata">
+
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li class="file"><a href="../lib/euclid/math/trigonometry_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/euclid/math/trigonometry.rb">lib/euclid/math/trigonometry.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      <!-- What about Git info, or Hg info? This seems almost silly, albeit kind of cool. -->
+      <!-- TODO: generalize this for all SCMs -->
+
+      
+    </div>
+
+    <div id="class-metadata">
+
+      <!-- Parent Class -->
+      
+
+      <!-- Namespace Contents -->
+      
+
+      <!-- Method Quickref -->
+      
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+            
+            <li class="method">
+              <a href="#method-i-acos">#acos</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-acosh">#acosh</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-acot">#acot</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-acoth">#acoth</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-acsc">#acsc</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-acsch">#acsch</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-asec">#asec</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-asech">#asech</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-asin">#asin</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-asinh">#asinh</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-atan">#atan</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-atan2">#atan2</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-atanh">#atanh</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-cos">#cos</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-cosh">#cosh</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-cot">#cot</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-coth">#coth</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-csc">#csc</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-csch">#csch</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-deg2gon">#deg2gon</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-deg2rad">#deg2rad</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-gon2deg">#gon2deg</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-gon2rad">#gon2rad</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-hypot">#hypot</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-sec">#sec</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-sech">#sech</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-sin">#sin</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-sinc">#sinc</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-sinh">#sinh</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-tan">#tan</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-tanh">#tanh</a>
+            </li>
+          
+        </ul>
+      </div>
+      
+
+      <!-- Included Modules -->
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Information</h3>
+        <ul>
+        
+          <li class="file"><a href="../NOTICE.html">NOTICE</a></li>
+        
+          <li class="file"><a href="../HISTORY.html">HISTORY</a></li>
+        
+          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../README.html">README</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class Index
+          <span class="search-toggle"><img src="../assets/icon/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <!-- classpage.html : classes -->
+        <ul class="link-list">
+        
+          <li class="class"><a href="../Matrix.html">Matrix</a></li>
+        
+          <li class="module"><a href="../Matrix/Givens.html">Matrix::Givens</a></li>
+        
+          <li class="module"><a href="../Matrix/Hessenberg.html">Matrix::Hessenberg</a></li>
+        
+          <li class="module"><a href="../Matrix/Householder.html">Matrix::Householder</a></li>
+        
+          <li class="module"><a href="../Matrix/Jacobi.html">Matrix::Jacobi</a></li>
+        
+          <li class="module"><a href="../Matrix/LU.html">Matrix::LU</a></li>
+        
+          <li class="module"><a href="../Matrix/MMatrix.html">Matrix::MMatrix</a></li>
+        
+          <li class="module"><a href="../Math/Finance.html">Math::Finance</a></li>
+        
+          <li class="module"><a href="../Math/Logarithmic.html">Math::Logarithmic</a></li>
+        
+          <li class="module"><a href="../Math/Miscellaneous.html">Math::Miscellaneous</a></li>
+        
+          <li class="module"><a href="../Math/Probability.html">Math::Probability</a></li>
+        
+          <li class="module"><a href="../Math/Solvers.html">Math::Solvers</a></li>
+        
+          <li class="module"><a href="../Math/Trigonometry.html">Math::Trigonometry</a></li>
+        
+          <li class="module"><a href="../Euclid.html">Euclid</a></li>
+        
+          <li class="class"><a href="../Euclid/Matrix.html">Euclid::Matrix</a></li>
+        
+          <li class="module"><a href="../Enumerable/Probability.html">Enumerable::Probability</a></li>
+        
+          <li class="class"><a href="../InfinityClass.html">InfinityClass</a></li>
+        
+          <li class="class"><a href="../InfinityClass/Numeric.html">InfinityClass::Numeric</a></li>
+        
+          <li class="class"><a href="../Vector.html">Vector</a></li>
+        
+          <li class="module"><a href="../Vector/Norm.html">Vector::Norm</a></li>
+        
+          <li class="class"><a href="../Interval.html">Interval</a></li>
+        
+          <li class="class"><a href="../Object.html">Object</a></li>
+        
+          <li class="class"><a href="../Quaternion.html">Quaternion</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+    </div>
+
+    <div id="validator-badges">
+      
+      <div style="float: right; margin-right: 5px;">
+        <a href="http://validator.w3.org/check/referer"><img src="../assets/icon/check.png" alt="[Validate]" height="16" width="16" /></a>
+      </div>
+      Generated with <a href="http://rubyworks.github.com/rdazzle">RDazzle Newfish</a> 1.3.0
+      <br/><br/>
+    </div>
+  </div>
+
+  <div id="documentation">
+
+    <div id="description">
+      
+        <h1>Trigonometry</h1>
+      
+
+      <p>
+Trigonometric functions.
+</p>
+<ul>
+<li><p>
+Trigonometric functions <tt>acos</tt>, <tt>acot</tt>, <tt>acsc</tt>,
+<tt>asec</tt>, <tt>asin</tt>, <tt>atan</tt>, <tt>atan2</tt>, <tt>cos</tt>,
+<tt>cot</tt>, <tt>csc</tt>, <tt>sec</tt>, <tt>sin</tt>, <tt>tan</tt>
+</p>
+</li>
+<li><p>
+Hyperbolic functions <tt>acosh</tt>, <tt>acoth</tt>, <tt>acsch</tt>,
+<tt>asech</tt>, <tt>asinh</tt>, <tt>atanh</tt>, <tt>cosh</tt>,
+<tt>coth</tt>, <tt>csch</tt>, <tt>sech</tt>, <tt>sinh</tt>, <tt>tanh</tt>
+</p>
+</li>
+<li><p>
+Conversion between degree, gon and radian <tt>deg2gon</tt>,
+<tt>deg2rad</tt>, <tt>gon2deg</tt>, <tt>gon2rad</tt>, <tt>rad2deg</tt>,
+<tt>rad2gon</tt>
+</p>
+</li>
+</ul>
+
+    </div>
+
+    <!-- Constants -->
+    
+    <div id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
+      
+        <dt><a name="PI">PI</a></dt>
+        
+        <dd class="description"><p>
+Same as <tt>Math::PI</tt> Ludolph&#8217;s number, <tt><a
+href="Trigonometry.html#PI">PI</a> = 3.141_59..</tt>.
+</p></dd>
+        
+      
+        <dt><a name="PI_BY_2">PI_BY_2</a></dt>
+        
+        <dd class="description"></dd>
+        
+      
+        <dt><a name="DEG_TO_GON">DEG_TO_GON</a></dt>
+        
+        <dd class="description"></dd>
+        
+      
+        <dt><a name="DEG_TO_RAD">DEG_TO_RAD</a></dt>
+        
+        <dd class="description"></dd>
+        
+      
+        <dt><a name="GON_TO_DEG">GON_TO_DEG</a></dt>
+        
+        <dd class="description"></dd>
+        
+      
+        <dt><a name="GON_TO_RAD">GON_TO_RAD</a></dt>
+        
+        <dd class="description"></dd>
+        
+      
+        <dt><a name="RAD_TO_DEG">RAD_TO_DEG</a></dt>
+        
+        <dd class="description"></dd>
+        
+      
+        <dt><a name="RAD_TO_GON">RAD_TO_GON</a></dt>
+        
+        <dd class="description"></dd>
+        
+      
+      </dl>
+    </div>
+    
+
+    <!-- Attributes -->
+    
+
+    <!-- Methods -->
+    
+    <div id="public-instance-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="acos-method" class="method-detail ">
+        <a name="method-i-acos"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">acos</span><span
+            class="method-args">(x)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Same as <tt>Math.acos(x)</tt> - arcus cotangens of <tt>x</tt>
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="acos-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/euclid/math/trigonometry.rb, line 80</span>
+80:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">acos</span>(<span class="ruby-identifier">x</span>)
+81:       <span class="ruby-operator">::</span><span class="ruby-constant">Math</span>.<span class="ruby-identifier">acos</span>(<span class="ruby-identifier">x</span>)
+82:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="acosh-method" class="method-detail ">
+        <a name="method-i-acosh"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">acosh</span><span
+            class="method-args">(x)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Same as <tt>Math.acosh(x)</tt> - area cosinus hyperbolicus of <tt>x</tt>
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="acosh-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/euclid/math/trigonometry.rb, line 85</span>
+85:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">acosh</span>(<span class="ruby-identifier">x</span>)
+86:       <span class="ruby-operator">::</span><span class="ruby-constant">Math</span>.<span class="ruby-identifier">acosh</span>(<span class="ruby-identifier">x</span>)
+87:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="acot-method" class="method-detail ">
+        <a name="method-i-acot"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">acot</span><span
+            class="method-args">(x)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Arcus cotangens of <tt>x</tt>
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="acot-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/euclid/math/trigonometry.rb, line 90</span>
+90:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">acot</span>(<span class="ruby-identifier">x</span>)
+91:       <span class="ruby-constant">PI_BY_2</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">atan</span>(<span class="ruby-identifier">x</span>)
+92:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="acoth-method" class="method-detail ">
+        <a name="method-i-acoth"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">acoth</span><span
+            class="method-args">(x)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Area cotangens hyperbolicus of <tt>x</tt>
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="acoth-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/euclid/math/trigonometry.rb, line 95</span>
+95:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">acoth</span>(<span class="ruby-identifier">x</span>)
+96:       <span class="ruby-value">0.5</span> * <span class="ruby-operator">::</span><span class="ruby-constant">Math</span>.<span class="ruby-identifier">log</span>((<span class="ruby-identifier">x</span> <span class="ruby-operator">+</span> <span class="ruby-value">1.0</span>) <span class="ruby-operator">/</span> (<span class="ruby-identifier">x</span> <span class="ruby-operator">-</span> <span class="ruby-value">1.0</span>))
+97:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="acsc-method" class="method-detail ">
+        <a name="method-i-acsc"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">acsc</span><span
+            class="method-args">(x)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Arcus cosecans of <tt>x</tt>
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="acsc-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/math/trigonometry.rb, line 100</span>
+100:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">acsc</span>(<span class="ruby-identifier">x</span>)
+101:       <span class="ruby-identifier">asin</span>(<span class="ruby-value">1.0</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">x</span>)
+102:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="acsch-method" class="method-detail ">
+        <a name="method-i-acsch"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">acsch</span><span
+            class="method-args">(x)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Area cosecans hyperbolicus of <tt>x</tt>
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="acsch-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/math/trigonometry.rb, line 105</span>
+105:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">acsch</span>(<span class="ruby-identifier">x</span>)
+106:       <span class="ruby-operator">::</span><span class="ruby-constant">Math</span>.<span class="ruby-identifier">log</span>(<span class="ruby-value">1.0</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">+</span> <span class="ruby-constant">Math</span>.<span class="ruby-identifier">sqrt</span>(<span class="ruby-value">1.0</span> <span class="ruby-operator">+</span> <span class="ruby-value">1.0</span> <span class="ruby-operator">/</span> (<span class="ruby-identifier">x</span> * <span class="ruby-identifier">x</span>)))
+107:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="asec-method" class="method-detail ">
+        <a name="method-i-asec"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">asec</span><span
+            class="method-args">(x)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Arcus secans of <tt>x</tt>
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="asec-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/math/trigonometry.rb, line 110</span>
+110:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">asec</span>(<span class="ruby-identifier">x</span>)
+111:       <span class="ruby-identifier">acos</span>(<span class="ruby-value">1.0</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">x</span>)
+112:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="asech-method" class="method-detail ">
+        <a name="method-i-asech"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">asech</span><span
+            class="method-args">(x)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Area secans hyperbolicus of <tt>x</tt>
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="asech-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/math/trigonometry.rb, line 115</span>
+115:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">asech</span>(<span class="ruby-identifier">x</span>)
+116:       <span class="ruby-operator">::</span><span class="ruby-constant">Math</span>.<span class="ruby-identifier">log</span>((<span class="ruby-value">1.0</span> <span class="ruby-operator">+</span> <span class="ruby-operator">::</span><span class="ruby-constant">Math</span>.<span class="ruby-identifier">sqrt</span>(<span class="ruby-value">1.0</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">x</span> * <span class="ruby-identifier">x</span>)) <span class="ruby-operator">/</span> <span class="ruby-identifier">x</span>)
+117:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="asin-method" class="method-detail ">
+        <a name="method-i-asin"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">asin</span><span
+            class="method-args">(x)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Same as <tt>Math.asin(x)</tt> - arcus sinus of <tt>x</tt>
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="asin-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/math/trigonometry.rb, line 120</span>
+120:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">asin</span>(<span class="ruby-identifier">x</span>)
+121:       <span class="ruby-operator">::</span><span class="ruby-constant">Math</span>.<span class="ruby-identifier">asin</span>(<span class="ruby-identifier">x</span>)
+122:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="asinh-method" class="method-detail ">
+        <a name="method-i-asinh"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">asinh</span><span
+            class="method-args">(x)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Same as <tt>Math.sinh(x)</tt> - area sinus hyperbolicus of <tt>x</tt>
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="asinh-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/math/trigonometry.rb, line 125</span>
+125:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">asinh</span>(<span class="ruby-identifier">x</span>)
+126:       <span class="ruby-operator">::</span><span class="ruby-constant">Math</span>.<span class="ruby-identifier">asinh</span>(<span class="ruby-identifier">x</span>)
+127:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="atan-method" class="method-detail ">
+        <a name="method-i-atan"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">atan</span><span
+            class="method-args">(x)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Arcus tangens of <tt>x</tt>.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="atan-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/euclid/math/trigonometry.rb, line 55</span>
+55:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">atan</span>(<span class="ruby-identifier">x</span>)
+56:       <span class="ruby-operator">::</span><span class="ruby-constant">Math</span>.<span class="ruby-identifier">atan</span>(<span class="ruby-identifier">x</span>)
+57:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="atan--method" class="method-detail ">
+        <a name="method-i-atan2"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">atan2</span><span
+            class="method-args">(x, y)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Arcus tangens of <tt>x</tt> over <tt>y</tt>.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="atan--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/euclid/math/trigonometry.rb, line 60</span>
+60:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">atan2</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+61:       <span class="ruby-operator">::</span><span class="ruby-constant">Math</span>.<span class="ruby-identifier">atan2</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+62:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="atanh-method" class="method-detail ">
+        <a name="method-i-atanh"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">atanh</span><span
+            class="method-args">(x)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Same as <tt>Math.atanh(x)</tt> - area tangens hyperbolicus of <tt>x</tt>
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="atanh-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/euclid/math/trigonometry.rb, line 65</span>
+65:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">atanh</span>(<span class="ruby-identifier">x</span>)
+66:       <span class="ruby-operator">::</span><span class="ruby-constant">Math</span>.<span class="ruby-identifier">atanh</span>(<span class="ruby-identifier">x</span>)
+67:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="cos-method" class="method-detail ">
+        <a name="method-i-cos"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">cos</span><span
+            class="method-args">(x)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Same as <tt>Math.cos(x)</tt> - cosinus of <tt>x</tt>
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="cos-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/euclid/math/trigonometry.rb, line 70</span>
+70:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cos</span>(<span class="ruby-identifier">x</span>)
+71:       <span class="ruby-operator">::</span><span class="ruby-constant">Math</span>.<span class="ruby-identifier">cos</span>(<span class="ruby-identifier">x</span>)
+72:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="cosh-method" class="method-detail ">
+        <a name="method-i-cosh"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">cosh</span><span
+            class="method-args">(x)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Same as <tt>Math.cosh(x)</tt> - cosinus hyperbolicus of <tt>x</tt>
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="cosh-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/euclid/math/trigonometry.rb, line 75</span>
+75:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cosh</span>(<span class="ruby-identifier">x</span>)
+76:       <span class="ruby-operator">::</span><span class="ruby-constant">Math</span>.<span class="ruby-identifier">cosh</span>(<span class="ruby-identifier">x</span>)
+77:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="cot-method" class="method-detail ">
+        <a name="method-i-cot"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">cot</span><span
+            class="method-args">(x)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Cotangens of <tt>x</tt>
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="cot-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/math/trigonometry.rb, line 130</span>
+130:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cot</span>(<span class="ruby-identifier">x</span>)
+131:       <span class="ruby-identifier">tan</span>(<span class="ruby-constant">PI_BY_2</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">x</span>)
+132:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="coth-method" class="method-detail ">
+        <a name="method-i-coth"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">coth</span><span
+            class="method-args">(x)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Cotangens hyperbolicus of <tt>x</tt>
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="coth-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/math/trigonometry.rb, line 135</span>
+135:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">coth</span>(<span class="ruby-identifier">x</span>)
+136:       <span class="ruby-value">1.0</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">tanh</span>(<span class="ruby-identifier">x</span>)
+137:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="csc-method" class="method-detail ">
+        <a name="method-i-csc"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">csc</span><span
+            class="method-args">(x)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Cosecans of <tt>x</tt>
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="csc-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/math/trigonometry.rb, line 140</span>
+140:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">csc</span>(<span class="ruby-identifier">x</span>)
+141:       <span class="ruby-value">1.0</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">sin</span>(<span class="ruby-identifier">x</span>)
+142:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="csch-method" class="method-detail ">
+        <a name="method-i-csch"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">csch</span><span
+            class="method-args">(x)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Cosecans hyperbolicus of <tt>x</tt>
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="csch-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/math/trigonometry.rb, line 145</span>
+145:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">csch</span>(<span class="ruby-identifier">x</span>)
+146:       <span class="ruby-value">1.0</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">sinh</span>(<span class="ruby-identifier">x</span>)
+147:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="deg-gon-method" class="method-detail ">
+        <a name="method-i-deg2gon"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">deg2gon</span><span
+            class="method-args">(x)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Converts <tt>x</tt> form degree to gon
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="deg-gon-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/math/trigonometry.rb, line 160</span>
+160:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">deg2gon</span>(<span class="ruby-identifier">x</span>)
+161:       <span class="ruby-keyword kw">return</span> <span class="ruby-constant">DEG_TO_GON</span> * <span class="ruby-identifier">x</span>
+162:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="deg-rad-method" class="method-detail ">
+        <a name="method-i-deg2rad"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">deg2rad</span><span
+            class="method-args">(x)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Converts <tt>x</tt> form degree to radian
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="deg-rad-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/math/trigonometry.rb, line 165</span>
+165:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">deg2rad</span>(<span class="ruby-identifier">x</span>)
+166:       <span class="ruby-keyword kw">return</span> <span class="ruby-constant">DEG_TO_RAD</span> * <span class="ruby-identifier">x</span>
+167:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="gon-deg-method" class="method-detail ">
+        <a name="method-i-gon2deg"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">gon2deg</span><span
+            class="method-args">(x)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Converts <tt>x</tt> form gon to degree
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="gon-deg-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/math/trigonometry.rb, line 170</span>
+170:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">gon2deg</span>(<span class="ruby-identifier">x</span>)
+171:       <span class="ruby-keyword kw">return</span> <span class="ruby-constant">GON_TO_DEG</span> * <span class="ruby-identifier">x</span>
+172:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="gon-rad-method" class="method-detail ">
+        <a name="method-i-gon2rad"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">gon2rad</span><span
+            class="method-args">(x)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Converts <tt>x</tt> form gon to radian
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="gon-rad-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/math/trigonometry.rb, line 175</span>
+175:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">gon2rad</span>(<span class="ruby-identifier">x</span>)
+176:       <span class="ruby-keyword kw">return</span> <span class="ruby-constant">GON_TO_RAD</span> * <span class="ruby-identifier">x</span>
+177:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="hypot-method" class="method-detail ">
+        <a name="method-i-hypot"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">hypot</span><span
+            class="method-args">(x, y)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Same as <tt>Math.hypot(x, y)</tt>, length of hypotenuse of a rectangular
+triangle with sides <tt>x</tt> and <tt>y</tt>.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="hypot-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/math/trigonometry.rb, line 180</span>
+180:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">hypot</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+181:       <span class="ruby-operator">::</span><span class="ruby-constant">Math</span>.<span class="ruby-identifier">hypot</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+182:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="sec-method" class="method-detail ">
+        <a name="method-i-sec"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">sec</span><span
+            class="method-args">(x)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Secans of <tt>x</tt>.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="sec-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/math/trigonometry.rb, line 150</span>
+150:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sec</span>(<span class="ruby-identifier">x</span>)
+151:       <span class="ruby-value">1.0</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">cos</span>(<span class="ruby-identifier">x</span>)
+152:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="sech-method" class="method-detail ">
+        <a name="method-i-sech"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">sech</span><span
+            class="method-args">(x)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Secans hyperbolicus of <tt>x</tt>
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="sech-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/math/trigonometry.rb, line 155</span>
+155:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sech</span>(<span class="ruby-identifier">x</span>)
+156:       <span class="ruby-value">1.0</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">cosh</span>(<span class="ruby-identifier">x</span>)
+157:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="sin-method" class="method-detail ">
+        <a name="method-i-sin"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">sin</span><span
+            class="method-args">(x)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Sine of x.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="sin-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/euclid/math/trigonometry.rb, line 30</span>
+30:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sin</span>(<span class="ruby-identifier">x</span>)
+31:       <span class="ruby-operator">::</span><span class="ruby-constant">Math</span>.<span class="ruby-identifier">sin</span>(<span class="ruby-identifier">x</span>)
+32:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="sinc-method" class="method-detail ">
+        <a name="method-i-sinc"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">sinc</span><span
+            class="method-args">(x)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Sinc function of <tt>x</tt>.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="sinc-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/euclid/math/trigonometry.rb, line 40</span>
+40:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sinc</span>(<span class="ruby-identifier">x</span>)
+41:       (<span class="ruby-identifier">x</span> <span class="ruby-operator">==</span> <span class="ruby-value">0.0</span>) <span class="ruby-operator">?</span> <span class="ruby-value">1.0</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">sin</span>(<span class="ruby-identifier">x</span>) <span class="ruby-operator">/</span> <span class="ruby-identifier">x</span>
+42:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="sinh-method" class="method-detail ">
+        <a name="method-i-sinh"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">sinh</span><span
+            class="method-args">(x)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Hyperbolic Sine of <tt>x</tt>.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="sinh-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/euclid/math/trigonometry.rb, line 35</span>
+35:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sinh</span>(<span class="ruby-identifier">x</span>)
+36:       <span class="ruby-operator">::</span><span class="ruby-constant">Math</span>.<span class="ruby-identifier">sinh</span>(<span class="ruby-identifier">x</span>)
+37:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="tan-method" class="method-detail ">
+        <a name="method-i-tan"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">tan</span><span
+            class="method-args">(x)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Tagent of <tt>x</tt>.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="tan-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/euclid/math/trigonometry.rb, line 45</span>
+45:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">tan</span>(<span class="ruby-identifier">x</span>)
+46:       <span class="ruby-operator">::</span><span class="ruby-constant">Math</span>.<span class="ruby-identifier">tan</span>(<span class="ruby-identifier">x</span>)
+47:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="tanh-method" class="method-detail ">
+        <a name="method-i-tanh"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">tanh</span><span
+            class="method-args">(x)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Hyperbolic tagent of <tt>x</tt>.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="tanh-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/euclid/math/trigonometry.rb, line 50</span>
+50:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">tanh</span>(<span class="ruby-identifier">x</span>)
+51:       <span class="ruby-operator">::</span><span class="ruby-constant">Math</span>.<span class="ruby-identifier">tanh</span>(<span class="ruby-identifier">x</span>)
+52:     <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+    </div>
+  
+
+  </div>
+
+
+  <div id="rdoc-debugging-section-dump" class="debugging-section">
+  
+    <p>Disabled; run with --debug to generate this.</p>
+  
+  </div>
+
+</main>
+</body>
+</html>
+

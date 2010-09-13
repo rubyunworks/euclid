@@ -1,0 +1,3126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+  <title>Class: Quaternion</title>
+
+  
+    <link rel="SHORTCUT ICON" href="./assets/icon/class.png">
+  
+
+  <link type="text/css" rel="stylesheet" href="./assets/rdoc.css" media="screen" />
+  <link type="text/css" rel="stylesheet" href="./assets/highlight/styles/github.css" title="GitHub" />
+
+  <script type="text/javascript" charset="utf-8" src="./assets/jquery.js"></script>
+  <script type="text/javascript" charset="utf-8" src="./assets/highlight/highlight.pack.js"></script>
+  <script type="text/javascript" charset="utf-8" src="./assets/quicksearch.js"></script>
+  <script type="text/javascript" charset="utf-8" src="./assets/main.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready( function() {
+      $('#documentation pre').wrapInner('<code></code>');
+      hljs.tabReplace = '    ';
+      hljs.initHighlightingOnLoad('ruby');
+
+	    hookSourceViews();
+	    hookDebuggingToggle();
+	    hookQuickSearch();
+	    highlightLocationTarget();
+
+	    $('ul.link-list a').bind( "click", highlightClickTarget );
+    });
+  </script>
+</head>
+<body class="class">
+<div id="main">
+
+  <div class="head">
+    <h1>
+      
+        <img src="./assets/icon/class.png" align="absmiddle">&nbsp;
+      
+      <a href="./index.html">Euclid</a>&nbsp;
+      <a href="/">Quaternion</a>
+    </h1>
+  </div>
+
+  <div id="metadata">
+    <div id="project-metadata">
+
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li class="file"><a href="./lib/euclid/quaternion_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/euclid/quaternion.rb">lib/euclid/quaternion.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      <!-- What about Git info, or Hg info? This seems almost silly, albeit kind of cool. -->
+      <!-- TODO: generalize this for all SCMs -->
+
+      
+    </div>
+
+    <div id="class-metadata">
+
+      <!-- Parent Class -->
+      
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        <ul>
+          
+          <li class="class">Numeric</li>
+          
+        </ul>
+      </div>
+      
+
+      <!-- Namespace Contents -->
+      
+
+      <!-- Method Quickref -->
+      
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+            
+            <li class="singleton">
+              <a href="#method-c-generic%3F">::generic?</a>
+            </li>
+          
+            
+            <li class="singleton">
+              <a href="#method-c-new">::new</a>
+            </li>
+          
+            
+            <li class="singleton">
+              <a href="#method-c-polar">::polar</a>
+            </li>
+          
+            
+            <li class="singleton">
+              <a href="#method-c-rotation">::rotation</a>
+            </li>
+          
+            
+            <li class="singleton">
+              <a href="#method-c-vector">::vector</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-%25">#%</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-%2A">#*</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-%2A%2A">#**</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-%2B">#+</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i--">#-</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-%2F">#/</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-%3C%3D%3E">#<=></a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-%3D%3D">#==</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-abs">#abs</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-abs2">#abs2</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-acos">#acos</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-amplitude">#amplitude</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-arg1">#arg1</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-arg2">#arg2</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-arg3">#arg3</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-asin">#asin</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-atan">#atan</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-coerce">#coerce</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-conjugate">#conjugate</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-cos">#cos</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-cosh">#cosh</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-cross_product">#cross_product</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-divmod">#divmod</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-divmod_D4">#divmod_D4</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-dot_product">#dot_product</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-exp">#exp</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-gcd">#gcd</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-hash">#hash</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-image">#image</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-inspect">#inspect</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-inverse">#inverse</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-is_complex%3F">#is_complex?</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-is_quaternion%3F">#is_quaternion?</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-is_real%3F">#is_real?</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-is_unit_vector%3F">#is_unit_vector?</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-is_vector%3F">#is_vector?</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-latitude">#latitude</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-ldiv">#ldiv</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-ldivmod">#ldivmod</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-ldivmod_D4">#ldivmod_D4</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-lmod">#lmod</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-lmod_D4">#lmod_D4</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-log">#log</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-longitude">#longitude</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-magnitude">#magnitude</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-orthogonal_split">#orthogonal_split</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-polar">#polar</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-rdiv">#rdiv</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-real">#real</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-real_part">#real_part</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-rmod">#rmod</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-rmod_D4">#rmod_D4</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-rotate">#rotate</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-rotate_angle">#rotate_angle</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-round">#round</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-round_D4">#round_D4</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-sin">#sin</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-sinh">#sinh</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-sqrt">#sqrt</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-tan">#tan</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-tanh">#tanh</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-to_a">#to_a</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-to_c">#to_c</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-to_c2">#to_c2</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-to_s">#to_s</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-to_v">#to_v</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-unit_vector">#unit_vector</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-vector">#vector</a>
+            </li>
+          
+        </ul>
+      </div>
+      
+
+      <!-- Included Modules -->
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Information</h3>
+        <ul>
+        
+          <li class="file"><a href="./NOTICE.html">NOTICE</a></li>
+        
+          <li class="file"><a href="./HISTORY.html">HISTORY</a></li>
+        
+          <li class="file"><a href="./LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="./README.html">README</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class Index
+          <span class="search-toggle"><img src="./assets/icon/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <!-- classpage.html : classes -->
+        <ul class="link-list">
+        
+          <li class="class"><a href="./Matrix.html">Matrix</a></li>
+        
+          <li class="module"><a href="./Matrix/Givens.html">Matrix::Givens</a></li>
+        
+          <li class="module"><a href="./Matrix/Hessenberg.html">Matrix::Hessenberg</a></li>
+        
+          <li class="module"><a href="./Matrix/Householder.html">Matrix::Householder</a></li>
+        
+          <li class="module"><a href="./Matrix/Jacobi.html">Matrix::Jacobi</a></li>
+        
+          <li class="module"><a href="./Matrix/LU.html">Matrix::LU</a></li>
+        
+          <li class="module"><a href="./Matrix/MMatrix.html">Matrix::MMatrix</a></li>
+        
+          <li class="module"><a href="./Math/Finance.html">Math::Finance</a></li>
+        
+          <li class="module"><a href="./Math/Logarithmic.html">Math::Logarithmic</a></li>
+        
+          <li class="module"><a href="./Math/Miscellaneous.html">Math::Miscellaneous</a></li>
+        
+          <li class="module"><a href="./Math/Probability.html">Math::Probability</a></li>
+        
+          <li class="module"><a href="./Math/Solvers.html">Math::Solvers</a></li>
+        
+          <li class="module"><a href="./Math/Trigonometry.html">Math::Trigonometry</a></li>
+        
+          <li class="module"><a href="./Euclid.html">Euclid</a></li>
+        
+          <li class="class"><a href="./Euclid/Matrix.html">Euclid::Matrix</a></li>
+        
+          <li class="module"><a href="./Enumerable/Probability.html">Enumerable::Probability</a></li>
+        
+          <li class="class"><a href="./InfinityClass.html">InfinityClass</a></li>
+        
+          <li class="class"><a href="./InfinityClass/Numeric.html">InfinityClass::Numeric</a></li>
+        
+          <li class="class"><a href="./Vector.html">Vector</a></li>
+        
+          <li class="module"><a href="./Vector/Norm.html">Vector::Norm</a></li>
+        
+          <li class="class"><a href="./Interval.html">Interval</a></li>
+        
+          <li class="class"><a href="./Object.html">Object</a></li>
+        
+          <li class="class"><a href="./Quaternion.html">Quaternion</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+    </div>
+
+    <div id="validator-badges">
+      
+      <div style="float: right; margin-right: 5px;">
+        <a href="http://validator.w3.org/check/referer"><img src="./assets/icon/check.png" alt="[Validate]" height="16" width="16" /></a>
+      </div>
+      Generated with <a href="http://rubyworks.github.com/rdazzle">RDazzle Newfish</a> 1.3.0
+      <br/><br/>
+    </div>
+  </div>
+
+  <div id="documentation">
+
+    <div id="description">
+      
+        <h1>Quaternion</h1>
+      
+
+      
+    </div>
+
+    <!-- Constants -->
+    
+    <div id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
+      
+        <dt><a name="Zero">Zero</a></dt>
+        
+        <dd class="description"></dd>
+        
+      
+        <dt><a name="One">One</a></dt>
+        
+        <dd class="description"></dd>
+        
+      
+        <dt><a name="I">I</a></dt>
+        
+        <dd class="description"></dd>
+        
+      
+        <dt><a name="J">J</a></dt>
+        
+        <dd class="description"></dd>
+        
+      
+        <dt><a name="K">K</a></dt>
+        
+        <dd class="description"></dd>
+        
+      
+      </dl>
+    </div>
+    
+
+    <!-- Attributes -->
+    
+    <div id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="re-attribute-method" class="method-detail">
+        <a name="re"></a>
+        
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">re</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="im-attribute-method" class="method-detail">
+        <a name="im"></a>
+        
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">im</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="jm-attribute-method" class="method-detail">
+        <a name="jm"></a>
+        
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">jm</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="km-attribute-method" class="method-detail">
+        <a name="km"></a>
+        
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">km</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- Methods -->
+    
+    <div id="public-class-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="generic--method" class="method-detail ">
+        <a name="method-c-generic%3F"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">generic?</span><span
+            class="method-args">(other)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="generic--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 237</span>
+237:   <span class="ruby-keyword kw">def</span> <span class="ruby-constant">Quaternion</span><span class="ruby-operator">::</span><span class="ruby-identifier">generic?</span>(<span class="ruby-identifier">other</span>)
+238:     <span class="ruby-keyword kw">return</span> (<span class="ruby-identifier">other</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Complex</span>) <span class="ruby-keyword kw">or</span> <span class="ruby-constant">Complex</span>.<span class="ruby-identifier">generic?</span>(<span class="ruby-identifier">other</span>));
+239:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="new-method" class="method-detail ">
+        <a name="method-c-new"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">new</span><span
+            class="method-args">(a=0,b=0,c=0,d=0)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="new-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 240</span>
+240:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">a</span>=<span class="ruby-value">0</span>,<span class="ruby-identifier">b</span>=<span class="ruby-value">0</span>,<span class="ruby-identifier">c</span>=<span class="ruby-value">0</span>,<span class="ruby-identifier">d</span>=<span class="ruby-value">0</span>)
+241:     <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;non numeric 1st arg `#{a.inspect}'&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">a</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Numeric</span>;
+242:     <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;non numeric 2nd arg `#{b.inspect}'&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">b</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Numeric</span>;
+243:     <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;non numeric 3rd arg `#{c.inspect}'&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">c</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Numeric</span>;
+244:     <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;non numeric 4th arg `#{d.inspect}'&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">d</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Numeric</span>;
+245:     <span class="ruby-ivar">@re</span>=<span class="ruby-identifier">a</span>; <span class="ruby-ivar">@im</span>=<span class="ruby-identifier">b</span>; <span class="ruby-ivar">@jm</span>=<span class="ruby-identifier">c</span>; <span class="ruby-ivar">@km</span>=<span class="ruby-identifier">d</span>
+246:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="polar-method" class="method-detail ">
+        <a name="method-c-polar"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">polar</span><span
+            class="method-args">(m,t1=0,t2=0,t3=0)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="polar-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 255</span>
+255:   <span class="ruby-keyword kw">def</span> <span class="ruby-constant">Quaternion</span><span class="ruby-operator">::</span><span class="ruby-identifier">polar</span>(<span class="ruby-identifier">m</span>,<span class="ruby-identifier">t1</span>=<span class="ruby-value">0</span>,<span class="ruby-identifier">t2</span>=<span class="ruby-value">0</span>,<span class="ruby-identifier">t3</span>=<span class="ruby-value">0</span>)
+256:     <span class="ruby-comment cmt"># q=</span>
+257:     <span class="ruby-comment cmt">#   m*cos(t1)</span>
+258:     <span class="ruby-comment cmt">#   +m*sin(t1)cos(t2)i</span>
+259:     <span class="ruby-comment cmt">#   +m*sin(t1)sin(t2)cos(t3)j</span>
+260:     <span class="ruby-comment cmt">#   +m*sin(t1)sin(t2)sin(t3)k</span>
+261:     <span class="ruby-comment cmt"># m is known as the magnitude,</span>
+262:     <span class="ruby-comment cmt"># t1 is the amplitude(or angle) of the quaternion,</span>
+263:     <span class="ruby-comment cmt"># t2 and t3 are the latitude (or co-latitude) and longitude respectively.</span>
+264:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">m</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>) <span class="ruby-keyword kw">and</span> (<span class="ruby-identifier">m</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">==</span><span class="ruby-value">4</span>); <span class="ruby-identifier">t1</span>=<span class="ruby-identifier">m</span>[<span class="ruby-value">1</span>]; <span class="ruby-identifier">t2</span>=<span class="ruby-identifier">m</span>[<span class="ruby-value">2</span>]; <span class="ruby-identifier">t3</span>=<span class="ruby-identifier">m</span>[<span class="ruby-value">3</span>]; <span class="ruby-identifier">m</span>=<span class="ruby-identifier">m</span>[<span class="ruby-value">0</span>]; <span class="ruby-keyword kw">end</span>;
+265:     <span class="ruby-identifier">s</span>=<span class="ruby-identifier">m</span>
+266:     <span class="ruby-identifier">r_part</span>=<span class="ruby-identifier">s</span>*<span class="ruby-constant">Math</span>.<span class="ruby-identifier">cos</span>(<span class="ruby-identifier">t1</span>); <span class="ruby-identifier">s</span>=<span class="ruby-identifier">s</span>*<span class="ruby-constant">Math</span>.<span class="ruby-identifier">sin</span>(<span class="ruby-identifier">t1</span>)
+267:     <span class="ruby-identifier">i_part</span>=<span class="ruby-identifier">s</span>*<span class="ruby-constant">Math</span>.<span class="ruby-identifier">cos</span>(<span class="ruby-identifier">t2</span>); <span class="ruby-identifier">s</span>=<span class="ruby-identifier">s</span>*<span class="ruby-constant">Math</span>.<span class="ruby-identifier">sin</span>(<span class="ruby-identifier">t2</span>)
+268:     <span class="ruby-identifier">j_part</span>=<span class="ruby-identifier">s</span>*<span class="ruby-constant">Math</span>.<span class="ruby-identifier">cos</span>(<span class="ruby-identifier">t3</span>); <span class="ruby-identifier">k_part</span>=<span class="ruby-identifier">s</span>*<span class="ruby-constant">Math</span>.<span class="ruby-identifier">sin</span>(<span class="ruby-identifier">t3</span>)
+269:     <span class="ruby-identifier">new</span>(<span class="ruby-identifier">r_part</span>, <span class="ruby-identifier">i_part</span>, <span class="ruby-identifier">j_part</span>, <span class="ruby-identifier">k_part</span>)
+270:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="rotation-method" class="method-detail ">
+        <a name="method-c-rotation"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">rotation</span><span
+            class="method-args">(v,t)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="rotation-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 315</span>
+315:   <span class="ruby-keyword kw">def</span> <span class="ruby-constant">Quaternion</span><span class="ruby-operator">::</span><span class="ruby-identifier">rotation</span>(<span class="ruby-identifier">v</span>,<span class="ruby-identifier">t</span>)
+316:     <span class="ruby-comment cmt"># t-rotatin along the 3-D vector v</span>
+317:     (<span class="ruby-constant">Quaternion</span><span class="ruby-operator">::</span><span class="ruby-identifier">vector</span>(<span class="ruby-identifier">v</span>).<span class="ruby-identifier">unit_vector</span>) * <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>(<span class="ruby-identifier">t</span><span class="ruby-operator">/</span><span class="ruby-value">2</span>) <span class="ruby-operator">+</span> <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>(<span class="ruby-identifier">t</span><span class="ruby-operator">/</span><span class="ruby-value">2</span>)
+318:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="vector-method" class="method-detail ">
+        <a name="method-c-vector"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">vector</span><span
+            class="method-args">(v)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="vector-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 305</span>
+305:   <span class="ruby-keyword kw">def</span> <span class="ruby-constant">Quaternion</span><span class="ruby-operator">::</span><span class="ruby-identifier">vector</span>(<span class="ruby-identifier">v</span>)
+306:     <span class="ruby-comment cmt"># 3-D vector v=[x,y,z]</span>
+307:     <span class="ruby-constant">Quaternion</span>(<span class="ruby-value">0</span>,<span class="ruby-identifier">v</span>[<span class="ruby-value">0</span>],<span class="ruby-identifier">v</span>[<span class="ruby-value">1</span>],<span class="ruby-identifier">v</span>[<span class="ruby-value">2</span>])
+308:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+    </div>
+  
+    <div id="public-instance-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="--method" class="method-detail ">
+        <a name="method-i-%25"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">%</span><span
+            class="method-args">(other)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 414</span>
+414:   <span class="ruby-keyword kw">def</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">other</span>
+415:     <span class="ruby-comment cmt"># right mod</span>
+416:     <span class="ruby-identifier">d</span>,<span class="ruby-identifier">m</span>=<span class="ruby-identifier">divmod</span>(<span class="ruby-identifier">other</span>); <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">m</span>
+417:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="--method" class="method-detail ">
+        <a name="method-i-%2A"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">*</span><span
+            class="method-args">(other)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 360</span>
+360:   <span class="ruby-keyword kw">def</span> * (<span class="ruby-identifier">other</span>)
+361:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Quaternion</span>)
+362:       <span class="ruby-constant">Quaternion</span>(<span class="ruby-ivar">@re</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">re</span><span class="ruby-operator">-</span><span class="ruby-ivar">@im</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">im</span><span class="ruby-operator">-</span><span class="ruby-ivar">@jm</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">jm</span><span class="ruby-operator">-</span><span class="ruby-ivar">@km</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">km</span>,
+363:            <span class="ruby-ivar">@re</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">im</span><span class="ruby-operator">+</span><span class="ruby-ivar">@im</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">re</span><span class="ruby-operator">+</span><span class="ruby-ivar">@jm</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">km</span><span class="ruby-operator">-</span><span class="ruby-ivar">@km</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">jm</span>,
+364:            <span class="ruby-ivar">@re</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">jm</span><span class="ruby-operator">-</span><span class="ruby-ivar">@im</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">km</span><span class="ruby-operator">+</span><span class="ruby-ivar">@jm</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">re</span><span class="ruby-operator">+</span><span class="ruby-ivar">@km</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">im</span>,
+365:            <span class="ruby-ivar">@re</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">km</span><span class="ruby-operator">+</span><span class="ruby-ivar">@im</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">jm</span><span class="ruby-operator">-</span><span class="ruby-ivar">@jm</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">im</span><span class="ruby-operator">+</span><span class="ruby-ivar">@km</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">re</span>)
+366:     <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Complex</span>)
+367:       <span class="ruby-constant">Quaternion</span>(<span class="ruby-ivar">@re</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">real</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@im</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">image</span>,
+368:            <span class="ruby-ivar">@re</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">image</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@im</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">real</span>,
+369:            <span class="ruby-ivar">@jm</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">real</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@km</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">image</span>,
+370:            <span class="ruby-ivar">@km</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">real</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@jm</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">image</span>)
+371:     <span class="ruby-keyword kw">elsif</span> <span class="ruby-constant">Complex</span>.<span class="ruby-identifier">generic?</span>(<span class="ruby-identifier">other</span>)
+372:       <span class="ruby-constant">Quaternion</span>(<span class="ruby-ivar">@re</span> * <span class="ruby-identifier">other</span>, <span class="ruby-ivar">@im</span> * <span class="ruby-identifier">other</span>, <span class="ruby-ivar">@jm</span> * <span class="ruby-identifier">other</span>, <span class="ruby-ivar">@km</span> * <span class="ruby-identifier">other</span>)
+373:     <span class="ruby-keyword kw">else</span> <span class="ruby-identifier">x</span> , <span class="ruby-identifier">y</span> = <span class="ruby-identifier">other</span>.<span class="ruby-identifier">coerce</span>(<span class="ruby-keyword kw">self</span>); <span class="ruby-identifier">x</span> * <span class="ruby-identifier">y</span>
+374:     <span class="ruby-keyword kw">end</span>
+375:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="--method" class="method-detail ">
+        <a name="method-i-%2A%2A"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">**</span><span
+            class="method-args">(other)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 465</span>
+465:   <span class="ruby-keyword kw">def</span> <span class="ruby-operator">**</span> <span class="ruby-identifier">other</span>
+466:     <span class="ruby-comment cmt"># q1^q2 = exp((log q1)*q2)</span>
+467:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Quaternion</span>); ((<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">log</span>)*<span class="ruby-identifier">other</span>).<span class="ruby-identifier">exp</span>
+468:     <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Complex</span>); ((<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">log</span>)*<span class="ruby-identifier">other</span>).<span class="ruby-identifier">exp</span>
+469:     <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Integer</span>);
+470:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">other</span><span class="ruby-operator">==</span><span class="ruby-value">0</span>; <span class="ruby-keyword kw">return</span> <span class="ruby-constant">One</span>;
+471:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">other</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>;
+472:         <span class="ruby-identifier">x</span> = <span class="ruby-keyword kw">self</span>; <span class="ruby-identifier">q</span> = <span class="ruby-identifier">x</span>; <span class="ruby-identifier">n</span> = <span class="ruby-identifier">other</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+473:         <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>
+474:           <span class="ruby-keyword kw">while</span> (<span class="ruby-identifier">d</span>, <span class="ruby-identifier">m</span> = <span class="ruby-identifier">n</span>.<span class="ruby-identifier">divmod</span>(<span class="ruby-value">2</span>); <span class="ruby-identifier">m</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>); <span class="ruby-identifier">x</span> = <span class="ruby-identifier">x</span>*<span class="ruby-identifier">x</span>; <span class="ruby-identifier">n</span> = <span class="ruby-identifier">d</span>; <span class="ruby-keyword kw">end</span>
+475:           <span class="ruby-identifier">q</span> <span class="ruby-operator">*=</span> <span class="ruby-identifier">x</span>; <span class="ruby-identifier">n</span> <span class="ruby-operator">-=</span> <span class="ruby-value">1</span>
+476:         <span class="ruby-keyword kw">end</span>
+477:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">q</span>
+478:       <span class="ruby-keyword kw">else</span> <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">inverse</span><span class="ruby-operator">**</span>(<span class="ruby-operator">-</span><span class="ruby-identifier">other</span>)
+479:       <span class="ruby-keyword kw">end</span>
+480:     <span class="ruby-keyword kw">elsif</span> <span class="ruby-constant">Quaternion</span><span class="ruby-operator">::</span><span class="ruby-identifier">generic?</span>(<span class="ruby-identifier">other</span>); ((<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">log</span>)*<span class="ruby-identifier">other</span>).<span class="ruby-identifier">exp</span>
+481:     <span class="ruby-keyword kw">else</span> <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span> = <span class="ruby-identifier">other</span>.<span class="ruby-identifier">coerce</span>(<span class="ruby-keyword kw">self</span>); <span class="ruby-identifier">x</span> <span class="ruby-operator">**</span> <span class="ruby-identifier">y</span>
+482:     <span class="ruby-keyword kw">end</span>;
+483:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="--method" class="method-detail ">
+        <a name="method-i-%2B"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">+</span><span
+            class="method-args">(other)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 340</span>
+340:   <span class="ruby-keyword kw">def</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">other</span>)
+341:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Quaternion</span>)
+342:       <span class="ruby-constant">Quaternion</span>(<span class="ruby-ivar">@re</span><span class="ruby-operator">+</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">re</span>,<span class="ruby-ivar">@im</span><span class="ruby-operator">+</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">im</span>,<span class="ruby-ivar">@jm</span><span class="ruby-operator">+</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">jm</span>,<span class="ruby-ivar">@km</span><span class="ruby-operator">+</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">km</span>)
+343:     <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Complex</span>)
+344:       <span class="ruby-constant">Quaternion</span>(<span class="ruby-ivar">@re</span><span class="ruby-operator">+</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">real</span>,<span class="ruby-ivar">@im</span><span class="ruby-operator">+</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">image</span>, <span class="ruby-ivar">@jm</span>, <span class="ruby-ivar">@km</span>)
+345:     <span class="ruby-keyword kw">elsif</span> <span class="ruby-constant">Complex</span>.<span class="ruby-identifier">generic?</span>(<span class="ruby-identifier">other</span>)
+346:       <span class="ruby-constant">Quaternion</span>(<span class="ruby-ivar">@re</span><span class="ruby-operator">+</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">real</span>,<span class="ruby-ivar">@im</span>, <span class="ruby-ivar">@jm</span>, <span class="ruby-ivar">@km</span>)
+347:     <span class="ruby-keyword kw">else</span> <span class="ruby-identifier">x</span> , <span class="ruby-identifier">y</span> = <span class="ruby-identifier">other</span>.<span class="ruby-identifier">coerce</span>(<span class="ruby-keyword kw">self</span>); <span class="ruby-identifier">x</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">y</span>
+348:     <span class="ruby-keyword kw">end</span>
+349:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="--method" class="method-detail ">
+        <a name="method-i--"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">-</span><span
+            class="method-args">(other)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 350</span>
+350:   <span class="ruby-keyword kw">def</span> <span class="ruby-operator">-</span> (<span class="ruby-identifier">other</span>)
+351:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Quaternion</span>)
+352:       <span class="ruby-constant">Quaternion</span>(<span class="ruby-ivar">@re</span><span class="ruby-operator">-</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">re</span>,<span class="ruby-ivar">@im</span><span class="ruby-operator">-</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">im</span>,<span class="ruby-ivar">@jm</span><span class="ruby-operator">-</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">jm</span>,<span class="ruby-ivar">@km</span><span class="ruby-operator">-</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">km</span>)
+353:     <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Complex</span>)
+354:       <span class="ruby-constant">Quaternion</span>(<span class="ruby-ivar">@re</span><span class="ruby-operator">-</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">real</span>,<span class="ruby-ivar">@im</span><span class="ruby-operator">-</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">image</span>, <span class="ruby-ivar">@jm</span>, <span class="ruby-ivar">@km</span>)
+355:     <span class="ruby-keyword kw">elsif</span> <span class="ruby-constant">Complex</span>.<span class="ruby-identifier">generic?</span>(<span class="ruby-identifier">other</span>)
+356:       <span class="ruby-constant">Quaternion</span>(<span class="ruby-ivar">@re</span><span class="ruby-operator">-</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">real</span>,<span class="ruby-ivar">@im</span>, <span class="ruby-ivar">@jm</span>, <span class="ruby-ivar">@km</span>)
+357:     <span class="ruby-keyword kw">else</span> <span class="ruby-identifier">x</span> , <span class="ruby-identifier">y</span> = <span class="ruby-identifier">other</span>.<span class="ruby-identifier">coerce</span>(<span class="ruby-keyword kw">self</span>); <span class="ruby-identifier">x</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">y</span>
+358:     <span class="ruby-keyword kw">end</span>
+359:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="--method" class="method-detail ">
+        <a name="method-i-%2F"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">/</span><span
+            class="method-args">(other)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 382</span>
+382:   <span class="ruby-keyword kw">def</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">other</span>
+383:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Quaternion</span>); <span class="ruby-keyword kw">self</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">conjugate</span><span class="ruby-operator">/</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">abs2</span>
+384:     <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Complex</span>); <span class="ruby-keyword kw">self</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">conjugate</span><span class="ruby-operator">/</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">abs2</span>
+385:     <span class="ruby-keyword kw">elsif</span> <span class="ruby-constant">Complex</span>.<span class="ruby-identifier">generic?</span>(<span class="ruby-identifier">other</span>);
+386:       <span class="ruby-constant">Quaternion</span>(<span class="ruby-ivar">@re</span><span class="ruby-operator">/</span><span class="ruby-identifier">other</span>, <span class="ruby-ivar">@im</span><span class="ruby-operator">/</span><span class="ruby-identifier">other</span>, <span class="ruby-ivar">@jm</span><span class="ruby-operator">/</span><span class="ruby-identifier">other</span>, <span class="ruby-ivar">@km</span><span class="ruby-operator">/</span><span class="ruby-identifier">other</span> )
+387:     <span class="ruby-keyword kw">else</span> <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span> = <span class="ruby-identifier">other</span>.<span class="ruby-identifier">coerce</span>(<span class="ruby-keyword kw">self</span>); <span class="ruby-identifier">x</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">y</span>
+388:     <span class="ruby-keyword kw">end</span>
+389:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="--method" class="method-detail ">
+        <a name="method-i-%3C%3D%3E"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">&lt;=&gt;</span><span
+            class="method-args">(other)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 329</span>
+329:   <span class="ruby-keyword kw">def</span> <span class="ruby-operator">&lt;=&gt;</span> (<span class="ruby-identifier">other</span>); <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">abs</span>; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="--method" class="method-detail ">
+        <a name="method-i-%3D%3D"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">==</span><span
+            class="method-args">(other)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 330</span>
+330:   <span class="ruby-keyword kw">def</span> <span class="ruby-operator">==</span> (<span class="ruby-identifier">other</span>)
+331:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Quaternion</span>)
+332:       <span class="ruby-keyword kw">return</span> (<span class="ruby-ivar">@re</span><span class="ruby-operator">==</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">re</span> <span class="ruby-keyword kw">and</span> <span class="ruby-ivar">@im</span><span class="ruby-operator">==</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">im</span> <span class="ruby-keyword kw">and</span> <span class="ruby-ivar">@jm</span><span class="ruby-operator">==</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">jm</span> <span class="ruby-keyword kw">and</span> <span class="ruby-ivar">@km</span><span class="ruby-operator">==</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">km</span>)
+333:     <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Complex</span>)
+334:       <span class="ruby-ivar">@re</span><span class="ruby-operator">==</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">real</span> <span class="ruby-keyword kw">and</span> <span class="ruby-ivar">@im</span><span class="ruby-operator">==</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">image</span> <span class="ruby-keyword kw">and</span> <span class="ruby-ivar">@jm</span><span class="ruby-operator">==</span><span class="ruby-value">0</span> <span class="ruby-keyword kw">and</span> <span class="ruby-ivar">@km</span><span class="ruby-operator">==</span><span class="ruby-value">0</span>
+335:     <span class="ruby-keyword kw">elsif</span> <span class="ruby-constant">Complex</span>.<span class="ruby-identifier">generic?</span>(<span class="ruby-identifier">other</span>)
+336:       <span class="ruby-ivar">@re</span><span class="ruby-operator">==</span><span class="ruby-identifier">other</span> <span class="ruby-keyword kw">and</span> <span class="ruby-ivar">@im</span><span class="ruby-operator">==</span><span class="ruby-value">0</span> <span class="ruby-keyword kw">and</span> <span class="ruby-ivar">@jm</span><span class="ruby-operator">==</span><span class="ruby-value">0</span> <span class="ruby-keyword kw">and</span> <span class="ruby-ivar">@km</span><span class="ruby-operator">==</span><span class="ruby-value">0</span>
+337:     <span class="ruby-keyword kw">else</span> <span class="ruby-identifier">x</span> , <span class="ruby-identifier">y</span> = <span class="ruby-identifier">other</span>.<span class="ruby-identifier">coerce</span>(<span class="ruby-keyword kw">self</span>); <span class="ruby-identifier">x</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">y</span>
+338:     <span class="ruby-keyword kw">end</span>
+339:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="abs-method" class="method-detail ">
+        <a name="method-i-abs"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">abs</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="abs-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 293</span>
+293:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">abs</span>; <span class="ruby-constant">Math</span>.<span class="ruby-identifier">sqrt</span>((<span class="ruby-ivar">@re</span>*<span class="ruby-ivar">@re</span><span class="ruby-operator">+</span><span class="ruby-ivar">@im</span>*<span class="ruby-ivar">@im</span><span class="ruby-operator">+</span><span class="ruby-ivar">@jm</span>*<span class="ruby-ivar">@jm</span><span class="ruby-operator">+</span><span class="ruby-ivar">@km</span>*<span class="ruby-ivar">@km</span>).<span class="ruby-identifier">to_f</span>); <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="abs--method" class="method-detail ">
+        <a name="method-i-abs2"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">abs2</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="abs--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 292</span>
+292:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">abs2</span>; <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@re</span>*<span class="ruby-ivar">@re</span><span class="ruby-operator">+</span><span class="ruby-ivar">@im</span>*<span class="ruby-ivar">@im</span><span class="ruby-operator">+</span><span class="ruby-ivar">@jm</span>*<span class="ruby-ivar">@jm</span><span class="ruby-operator">+</span><span class="ruby-ivar">@km</span>*<span class="ruby-ivar">@km</span>; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="acos-method" class="method-detail ">
+        <a name="method-i-acos"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">acos</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="acos-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 512</span>
+512:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">acos</span>
+513:     <span class="ruby-comment cmt"># acos q = -u log(q+sqrt(q^2-1))</span>
+514:     <span class="ruby-identifier">q</span>=<span class="ruby-keyword kw">self</span>; <span class="ruby-identifier">u</span>=<span class="ruby-identifier">unit_vector</span>; <span class="ruby-operator">-</span><span class="ruby-identifier">u</span>*((<span class="ruby-identifier">q</span><span class="ruby-operator">+</span>(<span class="ruby-identifier">q</span>*<span class="ruby-identifier">q</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>).<span class="ruby-identifier">sqrt</span>).<span class="ruby-identifier">log</span>)
+515:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="amplitude-method" class="method-detail ">
+        <a name="method-i-amplitude"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">amplitude</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="amplitude-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 271</span>
+271:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">amplitude</span>; <span class="ruby-constant">Math</span>.<span class="ruby-identifier">atan2</span>(<span class="ruby-constant">Math</span>.<span class="ruby-identifier">sqrt</span>((<span class="ruby-ivar">@im</span>*<span class="ruby-ivar">@im</span><span class="ruby-operator">+</span><span class="ruby-ivar">@jm</span>*<span class="ruby-ivar">@jm</span><span class="ruby-operator">+</span><span class="ruby-ivar">@km</span>*<span class="ruby-ivar">@km</span>).<span class="ruby-identifier">to_f</span>),<span class="ruby-ivar">@re</span>.<span class="ruby-identifier">to_f</span>); <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="arg--method" class="method-detail ">
+        <a name="method-i-arg1"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">arg1</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="arg--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 274</span>
+274:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">arg1</span>; <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">amplitude</span>; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="arg--method" class="method-detail ">
+        <a name="method-i-arg2"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">arg2</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="arg--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 275</span>
+275:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">arg2</span>; <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">latitude</span>; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="arg--method" class="method-detail ">
+        <a name="method-i-arg3"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">arg3</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="arg--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 276</span>
+276:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">arg3</span>; <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">longitude</span>; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="asin-method" class="method-detail ">
+        <a name="method-i-asin"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">asin</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Inverse trigonometric functions
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="asin-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 508</span>
+508:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">asin</span>
+509:     <span class="ruby-comment cmt"># asin q = -u log(uq+sqrt(1-q^2))</span>
+510:     <span class="ruby-identifier">q</span>=<span class="ruby-keyword kw">self</span>; <span class="ruby-identifier">u</span>=<span class="ruby-identifier">unit_vector</span>; <span class="ruby-operator">-</span><span class="ruby-identifier">u</span>*((<span class="ruby-identifier">u</span>*<span class="ruby-identifier">q</span><span class="ruby-operator">+</span>(<span class="ruby-value">1</span><span class="ruby-operator">-</span><span class="ruby-identifier">q</span>*<span class="ruby-identifier">q</span>).<span class="ruby-identifier">sqrt</span>).<span class="ruby-identifier">log</span>)
+511:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="atan-method" class="method-detail ">
+        <a name="method-i-atan"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">atan</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="atan-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 516</span>
+516:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">atan</span>
+517:     <span class="ruby-comment cmt"># atan q = u/2 log( (u+q)/(u-q)  )</span>
+518:     <span class="ruby-identifier">q</span>=<span class="ruby-keyword kw">self</span>; <span class="ruby-identifier">u</span>=<span class="ruby-identifier">q</span>.<span class="ruby-identifier">unit_vector</span>; <span class="ruby-identifier">u</span>*((<span class="ruby-identifier">u</span><span class="ruby-operator">+</span><span class="ruby-identifier">q</span>)<span class="ruby-operator">/</span>(<span class="ruby-identifier">u</span><span class="ruby-operator">-</span><span class="ruby-identifier">q</span>)).<span class="ruby-identifier">log</span><span class="ruby-operator">/</span><span class="ruby-value">2</span>
+519:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="coerce-method" class="method-detail ">
+        <a name="method-i-coerce"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">coerce</span><span
+            class="method-args">(other)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Arithmetic
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="coerce-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 323</span>
+323:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">coerce</span>(<span class="ruby-identifier">other</span>)
+324:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Complex</span>); <span class="ruby-keyword kw">return</span> <span class="ruby-constant">Quaternion</span>(<span class="ruby-identifier">other</span>), <span class="ruby-keyword kw">self</span>
+325:     <span class="ruby-keyword kw">elsif</span> <span class="ruby-constant">Complex</span><span class="ruby-operator">::</span><span class="ruby-identifier">generic?</span>(<span class="ruby-identifier">other</span>); <span class="ruby-keyword kw">return</span> <span class="ruby-constant">Quaternion</span>(<span class="ruby-identifier">other</span>), <span class="ruby-keyword kw">self</span>
+326:     <span class="ruby-keyword kw">else</span> <span class="ruby-keyword kw">super</span>
+327:     <span class="ruby-keyword kw">end</span>
+328:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="conjugate-method" class="method-detail ">
+        <a name="method-i-conjugate"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">conjugate</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="conjugate-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 295</span>
+295:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">conjugate</span>; <span class="ruby-constant">Quaternion</span>(<span class="ruby-ivar">@re</span>,<span class="ruby-operator">-</span><span class="ruby-ivar">@im</span>,<span class="ruby-operator">-</span><span class="ruby-ivar">@jm</span>,<span class="ruby-operator">-</span><span class="ruby-ivar">@km</span>); <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="cos-method" class="method-detail ">
+        <a name="method-i-cos"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">cos</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="cos-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 495</span>
+495:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cos</span>
+496:     <span class="ruby-comment cmt"># cos(r+uv)=cos r cosh v - u sin r sinh v</span>
+497:     <span class="ruby-identifier">vec</span>=<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">vector</span>; <span class="ruby-identifier">v</span>=<span class="ruby-identifier">vec</span>.<span class="ruby-identifier">abs</span>; <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">v</span><span class="ruby-operator">==</span><span class="ruby-value">0</span>; <span class="ruby-keyword kw">return</span> <span class="ruby-constant">Quaternion</span>(<span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>(<span class="ruby-ivar">@re</span>)); <span class="ruby-keyword kw">end</span>
+498:     <span class="ruby-identifier">u</span> = <span class="ruby-identifier">vec</span><span class="ruby-operator">/</span><span class="ruby-identifier">v</span>; <span class="ruby-identifier">e</span>=<span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">exp</span>(<span class="ruby-identifier">v</span>); <span class="ruby-identifier">er</span>=<span class="ruby-value">1</span><span class="ruby-operator">/</span><span class="ruby-identifier">e</span>; <span class="ruby-identifier">c</span>=<span class="ruby-identifier">e</span><span class="ruby-operator">+</span><span class="ruby-identifier">er</span>; <span class="ruby-identifier">s</span>=<span class="ruby-identifier">e</span><span class="ruby-operator">-</span><span class="ruby-identifier">er</span>
+499:     (<span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>(<span class="ruby-ivar">@re</span>)*<span class="ruby-identifier">c</span><span class="ruby-operator">-</span><span class="ruby-identifier">u</span>*<span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>(<span class="ruby-ivar">@re</span>)*<span class="ruby-identifier">s</span>)<span class="ruby-operator">/</span><span class="ruby-value">2</span>
+500:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="cosh-method" class="method-detail ">
+        <a name="method-i-cosh"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">cosh</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="cosh-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 486</span>
+486:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cosh</span>; <span class="ruby-identifier">e</span>=<span class="ruby-identifier">exp</span>; <span class="ruby-keyword kw">return</span> (<span class="ruby-identifier">e</span><span class="ruby-operator">+</span><span class="ruby-identifier">e</span>.<span class="ruby-identifier">inverse</span>)<span class="ruby-operator">/</span><span class="ruby-value">2</span>; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="cross-product-method" class="method-detail ">
+        <a name="method-i-cross_product"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">cross_product</span><span
+            class="method-args">(other)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="cross-product-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 379</span>
+379:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cross_product</span> <span class="ruby-identifier">other</span>
+380:     <span class="ruby-operator">-</span>(<span class="ruby-keyword kw">self</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">conjugate</span>).<span class="ruby-identifier">vector</span>
+381:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="divmod-method" class="method-detail ">
+        <a name="method-i-divmod"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">divmod</span><span
+            class="method-args">(other)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="divmod-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 398</span>
+398:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">divmod</span> <span class="ruby-identifier">other</span>
+399:     <span class="ruby-comment cmt"># right divmod: q1=d*q2+m</span>
+400:     <span class="ruby-identifier">d</span>=<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">rdiv</span>(<span class="ruby-identifier">other</span>).<span class="ruby-identifier">round</span>; <span class="ruby-identifier">m</span>=<span class="ruby-keyword kw">self</span><span class="ruby-operator">-</span><span class="ruby-identifier">d</span>*<span class="ruby-identifier">other</span>; <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">d</span>,<span class="ruby-identifier">m</span>
+401:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="divmod--method" class="method-detail ">
+        <a name="method-i-divmod_D4"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">divmod_D4</span><span
+            class="method-args">(other)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="divmod--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 402</span>
+402:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">divmod_D4</span> <span class="ruby-identifier">other</span>
+403:     <span class="ruby-comment cmt"># right divmod: q1=d*q2+m, d be D4</span>
+404:     <span class="ruby-identifier">d</span>=<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">rdiv</span>(<span class="ruby-identifier">other</span>).<span class="ruby-identifier">round_D4</span>; <span class="ruby-identifier">m</span>=<span class="ruby-keyword kw">self</span><span class="ruby-operator">-</span><span class="ruby-identifier">d</span>*<span class="ruby-identifier">other</span>; <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">d</span>,<span class="ruby-identifier">m</span>
+405:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="dot-product-method" class="method-detail ">
+        <a name="method-i-dot_product"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">dot_product</span><span
+            class="method-args">(other)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="dot-product-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 376</span>
+376:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">dot_product</span> <span class="ruby-identifier">other</span>
+377:     (<span class="ruby-keyword kw">self</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">conjugate</span>).<span class="ruby-identifier">re</span>
+378:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="exp-method" class="method-detail ">
+        <a name="method-i-exp"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">exp</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Exponential and logarithmic functions
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="exp-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 449</span>
+449:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">exp</span>
+450:     <span class="ruby-comment cmt"># e^(r+uv)=exp(r)(cos(v)+u*sin(v))</span>
+451:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">is_real?</span>; <span class="ruby-keyword kw">return</span> <span class="ruby-constant">Quaternion</span>(<span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">exp</span>(<span class="ruby-ivar">@re</span>)); <span class="ruby-keyword kw">end</span>
+452:     <span class="ruby-identifier">vec</span>=<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">vector</span>; <span class="ruby-identifier">v</span>=<span class="ruby-identifier">vec</span>.<span class="ruby-identifier">abs</span>; <span class="ruby-identifier">u</span> = <span class="ruby-identifier">vec</span><span class="ruby-operator">/</span><span class="ruby-identifier">v</span>;
+453:     <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">exp</span>(<span class="ruby-ivar">@re</span>)*(<span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>(<span class="ruby-identifier">v</span>)<span class="ruby-operator">+</span><span class="ruby-identifier">u</span>*<span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>(<span class="ruby-identifier">v</span>))
+454:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="gcd-method" class="method-detail ">
+        <a name="method-i-gcd"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">gcd</span><span
+            class="method-args">(other)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="gcd-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 434</span>
+434:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">gcd</span> <span class="ruby-identifier">other</span>
+435:     <span class="ruby-identifier">a</span>=<span class="ruby-keyword kw">self</span>; <span class="ruby-identifier">b</span>=<span class="ruby-identifier">other</span>
+436:     <span class="ruby-keyword kw">while</span> <span class="ruby-keyword kw">true</span>
+437:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">b</span><span class="ruby-operator">==</span><span class="ruby-value">0</span> ; <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">a</span>;<span class="ruby-keyword kw">end</span>
+438:       <span class="ruby-identifier">a</span>=<span class="ruby-identifier">a</span>.<span class="ruby-identifier">rmod_D4</span>(<span class="ruby-identifier">b</span>)
+439:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">a</span><span class="ruby-operator">==</span><span class="ruby-value">0</span> ; <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">b</span>;<span class="ruby-keyword kw">end</span>
+440:       <span class="ruby-identifier">b</span>=<span class="ruby-identifier">a</span>.<span class="ruby-identifier">lmod_D4</span>(<span class="ruby-identifier">b</span>)
+441:     <span class="ruby-keyword kw">end</span>
+442:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="hash-method" class="method-detail ">
+        <a name="method-i-hash"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">hash</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="hash-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 522</span>
+522:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">hash</span>; <span class="ruby-ivar">@re</span><span class="ruby-operator">^</span><span class="ruby-ivar">@im</span><span class="ruby-operator">^</span><span class="ruby-ivar">@jm</span><span class="ruby-operator">^</span><span class="ruby-ivar">@km</span>; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="image-method" class="method-detail ">
+        <a name="method-i-image"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">image</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="image-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 231</span>
+231:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">image</span>; <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@im</span>; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="inspect-method" class="method-detail ">
+        <a name="method-i-inspect"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">inspect</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="inspect-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 524</span>
+524:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">inspect</span>
+525:     <span class="ruby-identifier">sprintf</span>(<span class="ruby-value str">&quot;Quaternion(%s,%s,%s,%s)&quot;</span>,
+526:         <span class="ruby-ivar">@re</span>.<span class="ruby-identifier">inspect</span>, <span class="ruby-ivar">@im</span>.<span class="ruby-identifier">inspect</span>, <span class="ruby-ivar">@jm</span>.<span class="ruby-identifier">inspect</span>, <span class="ruby-ivar">@km</span>.<span class="ruby-identifier">inspect</span>)
+527:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="inverse-method" class="method-detail ">
+        <a name="method-i-inverse"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">inverse</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="inverse-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 296</span>
+296:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">inverse</span>; <span class="ruby-identifier">conjugate</span><span class="ruby-operator">/</span><span class="ruby-identifier">abs2</span>; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="is-complex--method" class="method-detail ">
+        <a name="method-i-is_complex%3F"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">is_complex?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="is-complex--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 299</span>
+299:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">is_complex?</span>; <span class="ruby-ivar">@jm</span><span class="ruby-operator">==</span><span class="ruby-value">0</span> <span class="ruby-keyword kw">and</span> <span class="ruby-ivar">@km</span><span class="ruby-operator">==</span><span class="ruby-value">0</span>; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="is-quaternion--method" class="method-detail ">
+        <a name="method-i-is_quaternion%3F"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">is_quaternion?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="is-quaternion--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 300</span>
+300:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">is_quaternion?</span>; <span class="ruby-keyword kw">not</span>(<span class="ruby-identifier">is_complex?</span>); <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="is-real--method" class="method-detail ">
+        <a name="method-i-is_real%3F"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">is_real?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="is-real--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 298</span>
+298:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">is_real?</span>; <span class="ruby-ivar">@im</span><span class="ruby-operator">==</span><span class="ruby-value">0</span> <span class="ruby-keyword kw">and</span> <span class="ruby-ivar">@jm</span><span class="ruby-operator">==</span><span class="ruby-value">0</span> <span class="ruby-keyword kw">and</span> <span class="ruby-ivar">@km</span><span class="ruby-operator">==</span><span class="ruby-value">0</span>; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="is-unit-vector--method" class="method-detail ">
+        <a name="method-i-is_unit_vector%3F"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">is_unit_vector?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="is-unit-vector--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 314</span>
+314:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">is_unit_vector?</span>; <span class="ruby-ivar">@re</span><span class="ruby-operator">==</span><span class="ruby-value">0</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">abs2</span><span class="ruby-operator">==</span><span class="ruby-value">1</span>; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="is-vector--method" class="method-detail ">
+        <a name="method-i-is_vector%3F"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">is_vector?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="is-vector--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 303</span>
+303:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">is_vector?</span>; <span class="ruby-ivar">@re</span><span class="ruby-operator">==</span><span class="ruby-value">0</span>; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="latitude-method" class="method-detail ">
+        <a name="method-i-latitude"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">latitude</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="latitude-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 272</span>
+272:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">latitude</span>; <span class="ruby-constant">Math</span>.<span class="ruby-identifier">atan2</span>(<span class="ruby-constant">Math</span>.<span class="ruby-identifier">sqrt</span>((<span class="ruby-ivar">@jm</span>*<span class="ruby-ivar">@jm</span><span class="ruby-operator">+</span><span class="ruby-ivar">@km</span>*<span class="ruby-ivar">@km</span>).<span class="ruby-identifier">to_f</span>),<span class="ruby-ivar">@im</span>.<span class="ruby-identifier">to_f</span>); <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="ldiv-method" class="method-detail ">
+        <a name="method-i-ldiv"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">ldiv</span><span
+            class="method-args">(other)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="ldiv-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 394</span>
+394:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ldiv</span> <span class="ruby-identifier">other</span>
+395:     <span class="ruby-comment cmt"># left division: 1/q1 * q2</span>
+396:     (<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">conjugate</span>)*<span class="ruby-identifier">other</span><span class="ruby-operator">/</span><span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">abs2</span>
+397:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="ldivmod-method" class="method-detail ">
+        <a name="method-i-ldivmod"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">ldivmod</span><span
+            class="method-args">(other)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="ldivmod-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 406</span>
+406:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ldivmod</span> <span class="ruby-identifier">other</span>
+407:     <span class="ruby-comment cmt"># left divmod: q2=q1*d+m</span>
+408:     <span class="ruby-identifier">d</span>=<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ldiv</span>(<span class="ruby-identifier">other</span>).<span class="ruby-identifier">round</span>; <span class="ruby-identifier">m</span>=<span class="ruby-identifier">other</span><span class="ruby-operator">-</span><span class="ruby-keyword kw">self</span>*<span class="ruby-identifier">d</span>; <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">d</span>,<span class="ruby-identifier">m</span>
+409:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="ldivmod--method" class="method-detail ">
+        <a name="method-i-ldivmod_D4"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">ldivmod_D4</span><span
+            class="method-args">(other)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="ldivmod--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 410</span>
+410:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ldivmod_D4</span> <span class="ruby-identifier">other</span>
+411:     <span class="ruby-comment cmt"># left divmod: q2=q1*d+m, d be D4</span>
+412:     <span class="ruby-identifier">d</span>=<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ldiv</span>(<span class="ruby-identifier">other</span>).<span class="ruby-identifier">round_D4</span>; <span class="ruby-identifier">m</span>=<span class="ruby-identifier">other</span><span class="ruby-operator">-</span><span class="ruby-keyword kw">self</span>*<span class="ruby-identifier">d</span>; <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">d</span>,<span class="ruby-identifier">m</span>
+413:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="lmod-method" class="method-detail ">
+        <a name="method-i-lmod"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">lmod</span><span
+            class="method-args">(other)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="lmod-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 426</span>
+426:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">lmod</span> <span class="ruby-identifier">other</span>
+427:     <span class="ruby-comment cmt"># left mod</span>
+428:     <span class="ruby-identifier">d</span>,<span class="ruby-identifier">m</span>=<span class="ruby-identifier">ldivmod</span>(<span class="ruby-identifier">other</span>); <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">m</span>
+429:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="lmod--method" class="method-detail ">
+        <a name="method-i-lmod_D4"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">lmod_D4</span><span
+            class="method-args">(other)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="lmod--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 430</span>
+430:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">lmod_D4</span> <span class="ruby-identifier">other</span>
+431:     <span class="ruby-comment cmt"># left mod with D4</span>
+432:     <span class="ruby-identifier">d</span>,<span class="ruby-identifier">m</span>=<span class="ruby-identifier">ldivmod_D4</span>(<span class="ruby-identifier">other</span>); <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">m</span>
+433:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="log-method" class="method-detail ">
+        <a name="method-i-log"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">log</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="log-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 455</span>
+455:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">log</span>
+456:     <span class="ruby-comment cmt"># log(r+uv)=1/2 log(r^2+v^2)+u atan(v/r)</span>
+457:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">is_real?</span>;
+458:       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@re</span><span class="ruby-operator">&gt;=</span><span class="ruby-value">0</span>; <span class="ruby-keyword kw">return</span> <span class="ruby-constant">Quaternion</span>(<span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">log</span>(<span class="ruby-ivar">@re</span>));
+459:       <span class="ruby-keyword kw">else</span> <span class="ruby-keyword kw">return</span> <span class="ruby-constant">Quaternion</span>(<span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">log</span>(<span class="ruby-operator">-</span><span class="ruby-ivar">@re</span>),<span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span>,<span class="ruby-value">0</span>,<span class="ruby-value">0</span>);
+460:       <span class="ruby-keyword kw">end</span>
+461:     <span class="ruby-keyword kw">end</span>
+462:     <span class="ruby-identifier">vec</span>=<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">vector</span>; <span class="ruby-identifier">v</span>=<span class="ruby-identifier">vec</span>.<span class="ruby-identifier">abs</span>; <span class="ruby-identifier">u</span> = <span class="ruby-identifier">vec</span><span class="ruby-operator">/</span><span class="ruby-identifier">v</span>;
+463:     <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">log</span>(<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">abs2</span>.<span class="ruby-identifier">to_f</span>)<span class="ruby-operator">/</span><span class="ruby-value">2</span><span class="ruby-operator">+</span><span class="ruby-identifier">u</span>*<span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">atan2</span>( <span class="ruby-identifier">v</span>, <span class="ruby-ivar">@re</span>)
+464:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="longitude-method" class="method-detail ">
+        <a name="method-i-longitude"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">longitude</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="longitude-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 273</span>
+273:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">longitude</span>; <span class="ruby-constant">Math</span>.<span class="ruby-identifier">atan2</span>( <span class="ruby-ivar">@km</span>.<span class="ruby-identifier">to_f</span>, <span class="ruby-ivar">@jm</span>.<span class="ruby-identifier">to_f</span>); <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="magnitude-method" class="method-detail ">
+        <a name="method-i-magnitude"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">magnitude</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="magnitude-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 294</span>
+294:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">magnitude</span>; <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">abs</span>; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="orthogonal-split-method" class="method-detail ">
+        <a name="method-i-orthogonal_split"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">orthogonal_split</span><span
+            class="method-args">(o)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="orthogonal-split-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 443</span>
+443:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">orthogonal_split</span>(<span class="ruby-identifier">o</span>)
+444:     <span class="ruby-comment cmt"># [q1,q2]. q = q1 + q2 such that q1 parallel to o, and q2 orthogonal to o.</span>
+445:     <span class="ruby-identifier">q1</span> = <span class="ruby-identifier">o</span> * <span class="ruby-identifier">dot_product</span>(<span class="ruby-identifier">o</span>); <span class="ruby-identifier">q2</span>=<span class="ruby-keyword kw">self</span><span class="ruby-operator">-</span><span class="ruby-identifier">q1</span>; <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">q1</span>,<span class="ruby-identifier">q2</span>
+446:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="polar-method" class="method-detail ">
+        <a name="method-i-polar"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">polar</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="polar-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 277</span>
+277:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">polar</span>; [<span class="ruby-identifier">magnitude</span>, <span class="ruby-identifier">amplitude</span>, <span class="ruby-identifier">latitude</span>, <span class="ruby-identifier">longitude</span>]; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="rdiv-method" class="method-detail ">
+        <a name="method-i-rdiv"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">rdiv</span><span
+            class="method-args">(other)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="rdiv-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 390</span>
+390:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rdiv</span> <span class="ruby-identifier">other</span>
+391:     <span class="ruby-comment cmt"># right division: q1/q2</span>
+392:     <span class="ruby-keyword kw">self</span><span class="ruby-operator">/</span><span class="ruby-identifier">other</span>
+393:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="real-method" class="method-detail ">
+        <a name="method-i-real"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">real</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="real-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 233</span>
+233:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">real</span>; <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@re</span>; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="real-part-method" class="method-detail ">
+        <a name="method-i-real_part"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">real_part</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="real-part-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 232</span>
+232:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">real_part</span>; <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@re</span>; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="rmod-method" class="method-detail ">
+        <a name="method-i-rmod"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">rmod</span><span
+            class="method-args">(other)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="rmod-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 418</span>
+418:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rmod</span> <span class="ruby-identifier">other</span>
+419:     <span class="ruby-comment cmt"># right mod(same as %)</span>
+420:     <span class="ruby-identifier">d</span>,<span class="ruby-identifier">m</span>=<span class="ruby-identifier">divmod</span>(<span class="ruby-identifier">other</span>); <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">m</span>
+421:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="rmod--method" class="method-detail ">
+        <a name="method-i-rmod_D4"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">rmod_D4</span><span
+            class="method-args">(other)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="rmod--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 422</span>
+422:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rmod_D4</span> <span class="ruby-identifier">other</span>
+423:     <span class="ruby-comment cmt"># right mod with D4</span>
+424:     <span class="ruby-identifier">d</span>,<span class="ruby-identifier">m</span>=<span class="ruby-identifier">divmod_D4</span>(<span class="ruby-identifier">other</span>); <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">m</span>
+425:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="rotate-method" class="method-detail ">
+        <a name="method-i-rotate"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">rotate</span><span
+            class="method-args">(r)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="rotate-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 319</span>
+319:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rotate</span>(<span class="ruby-identifier">r</span>); <span class="ruby-identifier">r</span> * <span class="ruby-keyword kw">self</span> * <span class="ruby-identifier">r</span>.<span class="ruby-identifier">conjugate</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">r</span>.<span class="ruby-identifier">abs2</span>; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="rotate-angle-method" class="method-detail ">
+        <a name="method-i-rotate_angle"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">rotate_angle</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="rotate-angle-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 320</span>
+320:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rotate_angle</span>; <span class="ruby-identifier">amplitude</span><span class="ruby-operator">/</span><span class="ruby-value">2</span>; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="round-method" class="method-detail ">
+        <a name="method-i-round"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">round</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="round-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 279</span>
+279:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">round</span>; <span class="ruby-constant">Quaternion</span>(<span class="ruby-ivar">@re</span>.<span class="ruby-identifier">round</span>,<span class="ruby-ivar">@im</span>.<span class="ruby-identifier">round</span>,<span class="ruby-ivar">@jm</span>.<span class="ruby-identifier">round</span>,<span class="ruby-ivar">@km</span>.<span class="ruby-identifier">round</span>);<span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="round--method" class="method-detail ">
+        <a name="method-i-round_D4"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">round_D4</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="round--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 280</span>
+280:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">round_D4</span>
+281:     <span class="ruby-comment cmt"># round to D4 lattice</span>
+282:     <span class="ruby-identifier">r1</span>=<span class="ruby-ivar">@re</span>.<span class="ruby-identifier">round</span>; <span class="ruby-identifier">a1</span>=<span class="ruby-ivar">@im</span>.<span class="ruby-identifier">round</span>; <span class="ruby-identifier">b1</span>=<span class="ruby-ivar">@jm</span>.<span class="ruby-identifier">round</span>; <span class="ruby-identifier">c1</span>=<span class="ruby-ivar">@km</span>.<span class="ruby-identifier">round</span>;
+283:     <span class="ruby-identifier">q1</span>=<span class="ruby-constant">Quaternion</span>(<span class="ruby-identifier">r1</span>,<span class="ruby-identifier">a1</span>,<span class="ruby-identifier">b1</span>,<span class="ruby-identifier">c1</span>); <span class="ruby-identifier">d1</span>=(<span class="ruby-identifier">q1</span><span class="ruby-operator">-</span><span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">abs2</span>
+284:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">d1</span><span class="ruby-operator">&lt;=</span><span class="ruby-value">1</span><span class="ruby-operator">/</span><span class="ruby-value">4</span>; <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">q1</span>; <span class="ruby-keyword kw">end</span>
+285:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@re</span><span class="ruby-operator">&lt;</span><span class="ruby-identifier">r1</span>; <span class="ruby-identifier">r2</span>=<span class="ruby-identifier">r1</span><span class="ruby-operator">-</span><span class="ruby-value">1</span><span class="ruby-operator">/</span><span class="ruby-value">2</span>; <span class="ruby-keyword kw">else</span> <span class="ruby-identifier">r2</span>=<span class="ruby-identifier">r1</span><span class="ruby-operator">+</span><span class="ruby-value">1</span><span class="ruby-operator">/</span><span class="ruby-value">2</span>; <span class="ruby-keyword kw">end</span>
+286:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@im</span><span class="ruby-operator">&lt;</span><span class="ruby-identifier">r1</span>; <span class="ruby-identifier">a2</span>=<span class="ruby-identifier">a1</span><span class="ruby-operator">-</span><span class="ruby-value">1</span><span class="ruby-operator">/</span><span class="ruby-value">2</span>; <span class="ruby-keyword kw">else</span> <span class="ruby-identifier">a2</span>=<span class="ruby-identifier">a1</span><span class="ruby-operator">+</span><span class="ruby-value">1</span><span class="ruby-operator">/</span><span class="ruby-value">2</span>; <span class="ruby-keyword kw">end</span>
+287:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@jm</span><span class="ruby-operator">&lt;</span><span class="ruby-identifier">r1</span>; <span class="ruby-identifier">b2</span>=<span class="ruby-identifier">b1</span><span class="ruby-operator">-</span><span class="ruby-value">1</span><span class="ruby-operator">/</span><span class="ruby-value">2</span>; <span class="ruby-keyword kw">else</span> <span class="ruby-identifier">b2</span>=<span class="ruby-identifier">b1</span><span class="ruby-operator">+</span><span class="ruby-value">1</span><span class="ruby-operator">/</span><span class="ruby-value">2</span>; <span class="ruby-keyword kw">end</span>
+288:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@km</span><span class="ruby-operator">&lt;</span><span class="ruby-identifier">r1</span>; <span class="ruby-identifier">c2</span>=<span class="ruby-identifier">c1</span><span class="ruby-operator">-</span><span class="ruby-value">1</span><span class="ruby-operator">/</span><span class="ruby-value">2</span>; <span class="ruby-keyword kw">else</span> <span class="ruby-identifier">c2</span>=<span class="ruby-identifier">c1</span><span class="ruby-operator">+</span><span class="ruby-value">1</span><span class="ruby-operator">/</span><span class="ruby-value">2</span>; <span class="ruby-keyword kw">end</span>
+289:     <span class="ruby-identifier">q2</span>=<span class="ruby-constant">Quaternion</span>(<span class="ruby-identifier">r2</span>,<span class="ruby-identifier">a2</span>,<span class="ruby-identifier">b2</span>,<span class="ruby-identifier">c2</span>); <span class="ruby-identifier">d2</span>=(<span class="ruby-identifier">q2</span><span class="ruby-operator">-</span><span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">abs2</span>
+290:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">d1</span><span class="ruby-operator">&lt;=</span><span class="ruby-identifier">d2</span>; <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">q1</span>; <span class="ruby-keyword kw">else</span> <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">q2</span>; <span class="ruby-keyword kw">end</span>
+291:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="sin-method" class="method-detail ">
+        <a name="method-i-sin"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">sin</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Trigonometric functions
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="sin-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 489</span>
+489:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sin</span>
+490:     <span class="ruby-comment cmt"># sin(r+uv)=sin r cosh v + u cos r sinh v</span>
+491:     <span class="ruby-identifier">vec</span>=<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">vector</span>; <span class="ruby-identifier">v</span>=<span class="ruby-identifier">vec</span>.<span class="ruby-identifier">abs</span>; <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">v</span><span class="ruby-operator">==</span><span class="ruby-value">0</span>; <span class="ruby-keyword kw">return</span> <span class="ruby-constant">Quaternion</span>(<span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>(<span class="ruby-ivar">@re</span>)); <span class="ruby-keyword kw">end</span>
+492:     <span class="ruby-identifier">u</span> = <span class="ruby-identifier">vec</span><span class="ruby-operator">/</span><span class="ruby-identifier">v</span>; <span class="ruby-identifier">e</span>=<span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">exp</span>(<span class="ruby-identifier">v</span>); <span class="ruby-identifier">er</span>=<span class="ruby-value">1</span><span class="ruby-operator">/</span><span class="ruby-identifier">e</span>; <span class="ruby-identifier">c</span>=<span class="ruby-identifier">e</span><span class="ruby-operator">+</span><span class="ruby-identifier">er</span>; <span class="ruby-identifier">s</span>=<span class="ruby-identifier">e</span><span class="ruby-operator">-</span><span class="ruby-identifier">er</span>
+493:     (<span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>(<span class="ruby-ivar">@re</span>)*<span class="ruby-identifier">c</span><span class="ruby-operator">+</span><span class="ruby-identifier">u</span>*<span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>(<span class="ruby-ivar">@re</span>)*<span class="ruby-identifier">s</span>)<span class="ruby-operator">/</span><span class="ruby-value">2</span>
+494:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="sinh-method" class="method-detail ">
+        <a name="method-i-sinh"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">sinh</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="sinh-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 485</span>
+485:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sinh</span>; <span class="ruby-identifier">e</span>=<span class="ruby-identifier">exp</span>; <span class="ruby-keyword kw">return</span> (<span class="ruby-identifier">e</span><span class="ruby-operator">-</span><span class="ruby-identifier">e</span>.<span class="ruby-identifier">inverse</span>)<span class="ruby-operator">/</span><span class="ruby-value">2</span>; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="sqrt-method" class="method-detail ">
+        <a name="method-i-sqrt"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">sqrt</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="sqrt-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 484</span>
+484:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sqrt</span>; <span class="ruby-keyword kw">self</span><span class="ruby-operator">**</span>(<span class="ruby-value">0.5</span>); <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="tan-method" class="method-detail ">
+        <a name="method-i-tan"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">tan</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="tan-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 501</span>
+501:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">tan</span>
+502:     <span class="ruby-identifier">vec</span>=<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">vector</span>; <span class="ruby-identifier">v</span>=<span class="ruby-identifier">vec</span>.<span class="ruby-identifier">abs</span>; <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">v</span><span class="ruby-operator">==</span><span class="ruby-value">0</span>; <span class="ruby-keyword kw">return</span> <span class="ruby-constant">Quaternion</span>(<span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">tan</span>(<span class="ruby-ivar">@re</span>)); <span class="ruby-keyword kw">end</span>
+503:     <span class="ruby-identifier">u</span> = <span class="ruby-identifier">vec</span><span class="ruby-operator">/</span><span class="ruby-identifier">v</span>; <span class="ruby-identifier">e</span>=<span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">exp</span>(<span class="ruby-identifier">v</span>); <span class="ruby-identifier">er</span>=<span class="ruby-value">1</span><span class="ruby-operator">/</span><span class="ruby-identifier">e</span>; <span class="ruby-identifier">c</span>=<span class="ruby-identifier">e</span><span class="ruby-operator">+</span><span class="ruby-identifier">er</span>; <span class="ruby-identifier">s</span>=<span class="ruby-identifier">e</span><span class="ruby-operator">-</span><span class="ruby-identifier">er</span>
+504:     <span class="ruby-identifier">co</span>=<span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">cos</span>(<span class="ruby-ivar">@re</span>); <span class="ruby-identifier">si</span>=<span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sin</span>(<span class="ruby-ivar">@re</span>);  (<span class="ruby-identifier">si</span>*<span class="ruby-identifier">c</span><span class="ruby-operator">+</span><span class="ruby-identifier">u</span>*<span class="ruby-identifier">co</span>*<span class="ruby-identifier">s</span>)<span class="ruby-operator">/</span>(<span class="ruby-identifier">co</span>*<span class="ruby-identifier">c</span><span class="ruby-operator">-</span><span class="ruby-identifier">u</span>*<span class="ruby-identifier">si</span>*<span class="ruby-identifier">s</span>)
+505:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="tanh-method" class="method-detail ">
+        <a name="method-i-tanh"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">tanh</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="tanh-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 487</span>
+487:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">tanh</span>; <span class="ruby-identifier">e</span>=<span class="ruby-identifier">exp</span>; <span class="ruby-identifier">e</span>=<span class="ruby-identifier">e</span>*<span class="ruby-identifier">e</span>; <span class="ruby-keyword kw">return</span> (<span class="ruby-identifier">e</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>)<span class="ruby-operator">/</span>(<span class="ruby-identifier">e</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>); <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="to-a-method" class="method-detail ">
+        <a name="method-i-to_a"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">to_a</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="to-a-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 236</span>
+236:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_a</span>; <span class="ruby-keyword kw">return</span> [<span class="ruby-ivar">@re</span>, <span class="ruby-ivar">@im</span>, <span class="ruby-ivar">@jm</span>, <span class="ruby-ivar">@km</span>]; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="to-c-method" class="method-detail ">
+        <a name="method-i-to_c"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">to_c</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="to-c-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 234</span>
+234:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_c</span>; <span class="ruby-keyword kw">return</span> <span class="ruby-constant">Complex</span>(<span class="ruby-ivar">@re</span>,<span class="ruby-ivar">@im</span>); <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="to-c--method" class="method-detail ">
+        <a name="method-i-to_c2"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">to_c2</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="to-c--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 235</span>
+235:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_c2</span>; <span class="ruby-keyword kw">return</span> <span class="ruby-constant">Complex</span>(<span class="ruby-ivar">@jm</span>,<span class="ruby-ivar">@km</span>); <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="to-s-method" class="method-detail ">
+        <a name="method-i-to_s"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">to_s</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="to-s-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 528</span>
+528:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_s</span>
+529:     <span class="ruby-identifier">s</span>=<span class="ruby-value str">&quot;&quot;</span>
+530:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@re</span><span class="ruby-operator">!=</span><span class="ruby-value">0</span>; <span class="ruby-identifier">s</span>=<span class="ruby-ivar">@re</span>.<span class="ruby-identifier">to_s</span>; <span class="ruby-keyword kw">end</span>
+531:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@im</span><span class="ruby-operator">!=</span><span class="ruby-value">0</span>;
+532:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">s</span><span class="ruby-operator">==</span><span class="ruby-value str">&quot;&quot;</span>; <span class="ruby-identifier">s</span>=<span class="ruby-identifier">sprintf</span>(<span class="ruby-value str">&quot;%si&quot;</span>, <span class="ruby-ivar">@im</span>);
+533:       <span class="ruby-keyword kw">else</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@im</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>; <span class="ruby-identifier">s</span>=<span class="ruby-identifier">sprintf</span>(<span class="ruby-value str">&quot;%s+%si&quot;</span>,<span class="ruby-identifier">s</span>,<span class="ruby-ivar">@im</span>); <span class="ruby-keyword kw">else</span> <span class="ruby-identifier">s</span>=<span class="ruby-identifier">sprintf</span>(<span class="ruby-value str">&quot;%s-%si&quot;</span>,<span class="ruby-identifier">s</span>,<span class="ruby-operator">-</span><span class="ruby-ivar">@im</span>); <span class="ruby-keyword kw">end</span>
+534:       <span class="ruby-keyword kw">end</span>
+535:     <span class="ruby-keyword kw">end</span>
+536:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@jm</span><span class="ruby-operator">!=</span><span class="ruby-value">0</span>;
+537:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">s</span><span class="ruby-operator">==</span><span class="ruby-value str">&quot;&quot;</span>; <span class="ruby-identifier">s</span>=<span class="ruby-identifier">sprintf</span>(<span class="ruby-value str">&quot;%sj&quot;</span>, <span class="ruby-ivar">@jm</span>);
+538:       <span class="ruby-keyword kw">else</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@jm</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>; <span class="ruby-identifier">s</span>=<span class="ruby-identifier">sprintf</span>(<span class="ruby-value str">&quot;%s+%sj&quot;</span>,<span class="ruby-identifier">s</span>,<span class="ruby-ivar">@jm</span>); <span class="ruby-keyword kw">else</span> <span class="ruby-identifier">s</span>=<span class="ruby-identifier">sprintf</span>(<span class="ruby-value str">&quot;%s-%sj&quot;</span>,<span class="ruby-identifier">s</span>,<span class="ruby-operator">-</span><span class="ruby-ivar">@jm</span>); <span class="ruby-keyword kw">end</span>
+539:       <span class="ruby-keyword kw">end</span>
+540:     <span class="ruby-keyword kw">end</span>
+541:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@km</span><span class="ruby-operator">!=</span><span class="ruby-value">0</span>;
+542:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">s</span><span class="ruby-operator">==</span><span class="ruby-value str">&quot;&quot;</span>; <span class="ruby-identifier">s</span>=<span class="ruby-identifier">sprintf</span>(<span class="ruby-value str">&quot;%sk&quot;</span>, <span class="ruby-ivar">@km</span>);
+543:       <span class="ruby-keyword kw">else</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@km</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>; <span class="ruby-identifier">s</span>=<span class="ruby-identifier">sprintf</span>(<span class="ruby-value str">&quot;%s+%sk&quot;</span>,<span class="ruby-identifier">s</span>,<span class="ruby-ivar">@km</span>); <span class="ruby-keyword kw">else</span> <span class="ruby-identifier">s</span>=<span class="ruby-identifier">sprintf</span>(<span class="ruby-value str">&quot;%s-%sk&quot;</span>,<span class="ruby-identifier">s</span>,<span class="ruby-operator">-</span><span class="ruby-ivar">@km</span>); <span class="ruby-keyword kw">end</span>
+544:       <span class="ruby-keyword kw">end</span>
+545:     <span class="ruby-keyword kw">end</span>
+546:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">s</span><span class="ruby-operator">==</span><span class="ruby-value str">&quot;&quot;</span> ; <span class="ruby-identifier">s</span>=<span class="ruby-value str">&quot;0&quot;</span>; <span class="ruby-keyword kw">end</span>;
+547:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">s</span>
+548:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="to-v-method" class="method-detail ">
+        <a name="method-i-to_v"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">to_v</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="to-v-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 304</span>
+304:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_v</span>; <span class="ruby-keyword kw">return</span> [<span class="ruby-ivar">@im</span>, <span class="ruby-ivar">@jm</span>, <span class="ruby-ivar">@km</span>]; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="unit-vector-method" class="method-detail ">
+        <a name="method-i-unit_vector"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">unit_vector</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="unit-vector-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 309</span>
+309:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">unit_vector</span>
+310:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">is_real?</span>; <span class="ruby-keyword kw">return</span> <span class="ruby-constant">Quaternion</span>(<span class="ruby-value">0</span>,<span class="ruby-value">1</span>); <span class="ruby-keyword kw">end</span>
+311:     <span class="ruby-identifier">m</span>=<span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-identifier">sqrt</span>((<span class="ruby-ivar">@im</span>*<span class="ruby-ivar">@im</span><span class="ruby-operator">+</span><span class="ruby-ivar">@jm</span>*<span class="ruby-ivar">@jm</span><span class="ruby-operator">+</span><span class="ruby-ivar">@km</span>*<span class="ruby-ivar">@km</span>).<span class="ruby-identifier">to_f</span>)
+312:     <span class="ruby-constant">Quaternion</span>(<span class="ruby-value">0</span>,<span class="ruby-ivar">@im</span><span class="ruby-operator">/</span><span class="ruby-identifier">m</span>,<span class="ruby-ivar">@jm</span><span class="ruby-operator">/</span><span class="ruby-identifier">m</span>,<span class="ruby-ivar">@km</span><span class="ruby-operator">/</span><span class="ruby-identifier">m</span>);
+313:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="vector-method" class="method-detail ">
+        <a name="method-i-vector"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">vector</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="vector-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/quaternion.rb, line 302</span>
+302:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">vector</span>; <span class="ruby-constant">Quaternion</span>(<span class="ruby-value">0</span>,<span class="ruby-ivar">@im</span>,<span class="ruby-ivar">@jm</span>,<span class="ruby-ivar">@km</span>); <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+    </div>
+  
+
+  </div>
+
+
+  <div id="rdoc-debugging-section-dump" class="debugging-section">
+  
+    <p>Disabled; run with --debug to generate this.</p>
+  
+  </div>
+
+</main>
+</body>
+</html>
+

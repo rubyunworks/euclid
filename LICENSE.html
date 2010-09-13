@@ -1,0 +1,2881 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+  <title>File: LICENSE [Euclid]</title>
+
+  <link rel="SHORTCUT ICON" href="./assets/icon/file.png">
+
+  <link type="text/css" rel="stylesheet" href="./assets/rdoc.css" media="screen" />
+  <link type="text/css" rel="stylesheet" href="./assets/highlight/styles/github.css" title="GitHub" />
+
+  <script type="text/javascript" charset="utf-8" src="./assets/jquery.js"></script>
+  <script type="text/javascript" charset="utf-8" src="./assets/highlight/highlight.pack.js"></script>
+  <script type="text/javascript" charset="utf-8" src="./assets/quicksearch.js"></script>
+  <script type="text/javascript" charset="utf-8" src="./assets/main.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready( function() {
+      $('#documentation pre').wrapInner('<code></code>');
+      hljs.tabReplace = '    ';
+      hljs.initHighlightingOnLoad('ruby');
+
+	    hookSourceViews();
+	    hookDebuggingToggle();
+	    hookQuickSearch();
+	    highlightLocationTarget();
+
+	    $('ul.link-list a').bind( "click", highlightClickTarget );
+    });
+  </script>
+</head>
+
+<body class="file"> <!-- .file-popup is no more -->
+<div id="main">
+
+  <div class="head">
+    <h1>
+      <img src="./assets/icon/file.png" align="absmiddle">&nbsp;
+      <a href="./index.html">Euclid</a>&nbsp;
+      <a href="/">LICENSE</a>
+    </h1>
+  </div>
+
+  <div id="metadata">
+    <div id="file-stats-section" class="section">
+      <h3 class="section-header">File Stats</h3>
+      <dl>
+        <dt class="modified-date">Last Modified</dt>
+        <dd class="modified-date">Sun Sep 12 21:15:20 -0400 2010</dd>
+
+        
+
+        
+      </dl>
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Information</h3>
+        <ul>
+        
+          <li class="file"><a href="./NOTICE.html">NOTICE</a></li>
+        
+          <li class="file"><a href="./HISTORY.html">HISTORY</a></li>
+        
+          <li class="file"><a href="./LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="./README.html">README</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class Index
+          <span class="search-toggle"><img src="./assets/icon/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li class="class"><a href="./Matrix.html">Matrix</a></li>
+        
+          <li class="module"><a href="./Matrix/Givens.html">Matrix::Givens</a></li>
+        
+          <li class="module"><a href="./Matrix/Hessenberg.html">Matrix::Hessenberg</a></li>
+        
+          <li class="module"><a href="./Matrix/Householder.html">Matrix::Householder</a></li>
+        
+          <li class="module"><a href="./Matrix/Jacobi.html">Matrix::Jacobi</a></li>
+        
+          <li class="module"><a href="./Matrix/LU.html">Matrix::LU</a></li>
+        
+          <li class="module"><a href="./Matrix/MMatrix.html">Matrix::MMatrix</a></li>
+        
+          <li class="module"><a href="./Math/Finance.html">Math::Finance</a></li>
+        
+          <li class="module"><a href="./Math/Logarithmic.html">Math::Logarithmic</a></li>
+        
+          <li class="module"><a href="./Math/Miscellaneous.html">Math::Miscellaneous</a></li>
+        
+          <li class="module"><a href="./Math/Probability.html">Math::Probability</a></li>
+        
+          <li class="module"><a href="./Math/Solvers.html">Math::Solvers</a></li>
+        
+          <li class="module"><a href="./Math/Trigonometry.html">Math::Trigonometry</a></li>
+        
+          <li class="module"><a href="./Euclid.html">Euclid</a></li>
+        
+          <li class="class"><a href="./Euclid/Matrix.html">Euclid::Matrix</a></li>
+        
+          <li class="module"><a href="./Enumerable/Probability.html">Enumerable::Probability</a></li>
+        
+          <li class="class"><a href="./InfinityClass.html">InfinityClass</a></li>
+        
+          <li class="class"><a href="./InfinityClass/Numeric.html">InfinityClass::Numeric</a></li>
+        
+          <li class="class"><a href="./Vector.html">Vector</a></li>
+        
+          <li class="module"><a href="./Vector/Norm.html">Vector::Norm</a></li>
+        
+          <li class="class"><a href="./Interval.html">Interval</a></li>
+        
+          <li class="class"><a href="./Object.html">Object</a></li>
+        
+          <li class="class"><a href="./Quaternion.html">Quaternion</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      <!-- METHODS -->
+      <div id="methodindex-section" class="section project-section">
+        <h3 class="section-header">Method Index</h3>
+        <ul>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-c-I">::I</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Matrix::Jacobi</span>
+              <a href="Matrix/Jacobi.html#method-c-J">::J</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Matrix::Householder</span>
+              <a href="Matrix/Householder.html#method-c-QR">::QR</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Matrix::Hessenberg</span>
+              <a href="Matrix/Hessenberg.html#method-c-QR">::QR</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Matrix::Givens</span>
+              <a href="Matrix/Givens.html#method-c-QR">::QR</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-c-%5B%5D">::[]</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-c-%5B%5D">::[]</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-c-%5B%5D">::[]</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Matrix::Householder</span>
+              <a href="Matrix/Householder.html#method-c-bidiag">::bidiag</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Matrix::Householder</span>
+              <a href="Matrix/Householder.html#method-c-bidiagUV">::bidiagUV</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-c-column_vector">::column_vector</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-c-columns">::columns</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-c-concat">::concat</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Matrix::MMatrix</span>
+              <a href="Matrix/MMatrix.html#method-c-default_block">::default_block</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-c-diag">::diag</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-c-diag_in_delta%3F">::diag_in_delta?</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-c-diagonal">::diagonal</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-c-elements">::elements</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-c-equal_in_delta%3F">::equal_in_delta?</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Matrix::LU</span>
+              <a href="Matrix/LU.html#method-c-factorization">::factorization</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Matrix::LU</span>
+              <a href="Matrix/LU.html#method-c-gauss">::gauss</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Matrix::LU</span>
+              <a href="Matrix/LU.html#method-c-gauss_vector">::gauss_vector</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-c-generic%3F">::generic?</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Matrix::Givens</span>
+              <a href="Matrix/Givens.html#method-c-givens">::givens</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-c-gram_schmidt">::gram_schmidt</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Matrix::MMatrix</span>
+              <a href="Matrix/MMatrix.html#method-c-id_vect_range">::id_vect_range</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-c-identity">::identity</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Matrix::Jacobi</span>
+              <a href="Matrix/Jacobi.html#method-c-max">::max</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-c-new">::new</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-c-new">::new</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">InfinityClass</span>
+              <a href="InfinityClass.html#method-c-new">::new</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-c-new">::new</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-c-new">::new</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-c-new">::new</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Matrix::Jacobi</span>
+              <a href="Matrix/Jacobi.html#method-c-off">::off</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-c-polar">::polar</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-c-rotation">::rotation</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-c-row_vector">::row_vector</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-c-rows">::rows</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-c-scalar">::scalar</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Vector::Norm</span>
+              <a href="Vector/Norm.html#method-c-sqnorm">::sqnorm</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Matrix::Jacobi</span>
+              <a href="Matrix/Jacobi.html#method-c-sym_schur2">::sym_schur2</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Matrix::Householder</span>
+              <a href="Matrix/Householder.html#method-c-toHessenberg">::toHessenberg</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-c-unit">::unit</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-c-vector">::vector</a>
+            </li>
+          
+            
+            <li class="singleton" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-c-zero">::zero</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-%25">#%</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-%2A">#*</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-%2A">#*</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-%2A">#*</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-%2A%2A">#**</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-%2A%2A">#**</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-%2B">#+</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-%2B">#+</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-%2B">#+</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">InfinityClass</span>
+              <a href="InfinityClass.html#method-i-%2B%40">#+@</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-i-%2B%40">#+@</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i--">#-</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i--">#-</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i--">#-</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-i--%40">#-@</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">InfinityClass</span>
+              <a href="InfinityClass.html#method-i--%40">#-@</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-%2F">#/</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-%2F">#/</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-%2F">#/</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-%2F">#/</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">InfinityClass</span>
+              <a href="InfinityClass.html#method-i-%3C%3D%3E">#<=></a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-%3C%3D%3E">#<=></a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">InfinityClass</span>
+              <a href="InfinityClass.html#method-i-%3D%3D">#==</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-%3D%3D">#==</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-%3D%3D">#==</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-%3D%3D">#==</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-i-%3D%3D%3D">#===</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-L">#L</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Object</span>
+              <a href="Object.html#method-i-Quaternion">#Quaternion</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-U">#U</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-%5B%5D">#[]</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-%5B%5D">#[]</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-%5B%5D">#[]</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-%5B%5D">#[]</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-%5B%5D%3D">#[]=</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-%5B%5D%3D">#[]=</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-%5B%5D%3D">#[]=</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-%5B%5D%3D">#[]=</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Miscellaneous</span>
+              <a href="Math/Miscellaneous.html#method-i-abs">#abs</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-abs">#abs</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-abs2">#abs2</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Probability</span>
+              <a href="Math/Probability.html#method-i-absolute_mean_difference">#absolute_mean_difference</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Trigonometry</span>
+              <a href="Math/Trigonometry.html#method-i-acos">#acos</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-acos">#acos</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Trigonometry</span>
+              <a href="Math/Trigonometry.html#method-i-acosh">#acosh</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Trigonometry</span>
+              <a href="Math/Trigonometry.html#method-i-acot">#acot</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Trigonometry</span>
+              <a href="Math/Trigonometry.html#method-i-acoth">#acoth</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Trigonometry</span>
+              <a href="Math/Trigonometry.html#method-i-acsc">#acsc</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Trigonometry</span>
+              <a href="Math/Trigonometry.html#method-i-acsch">#acsch</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-amplitude">#amplitude</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-arg1">#arg1</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-arg2">#arg2</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-arg3">#arg3</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Probability</span>
+              <a href="Math/Probability.html#method-i-arithmetic_mean">#arithmetic_mean</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Trigonometry</span>
+              <a href="Math/Trigonometry.html#method-i-asec">#asec</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Trigonometry</span>
+              <a href="Math/Trigonometry.html#method-i-asech">#asech</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-asin">#asin</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Trigonometry</span>
+              <a href="Math/Trigonometry.html#method-i-asin">#asin</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Trigonometry</span>
+              <a href="Math/Trigonometry.html#method-i-asinh">#asinh</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-atan">#atan</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Trigonometry</span>
+              <a href="Math/Trigonometry.html#method-i-atan">#atan</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Trigonometry</span>
+              <a href="Math/Trigonometry.html#method-i-atan2">#atan2</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Trigonometry</span>
+              <a href="Math/Trigonometry.html#method-i-atanh">#atanh</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Probability</span>
+              <a href="Math/Probability.html#method-i-atkinson_index">#atkinson_index</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Probability</span>
+              <a href="Math/Probability.html#method-i-average">#average</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Probability</span>
+              <a href="Math/Probability.html#method-i-avg">#avg</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-i-begin">#begin</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Logarithmic</span>
+              <a href="Math/Logarithmic.html#method-i-beta">#beta</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-bidiagonal">#bidiagonal</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-cJacobi">#cJacobi</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-cJacobiA">#cJacobiA</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-cJacobiV">#cJacobiV</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Probability</span>
+              <a href="Math/Probability.html#method-i-cdf">#cdf</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Miscellaneous</span>
+              <a href="Math/Miscellaneous.html#method-i-ceil">#ceil</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Probability</span>
+              <a href="Math/Probability.html#method-i-ci">#ci</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-clone">#clone</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-clone">#clone</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-clone">#clone</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-i-closed">#closed</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-coerce">#coerce</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">InfinityClass</span>
+              <a href="InfinityClass.html#method-i-coerce">#coerce</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-coerce">#coerce</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-coerce">#coerce</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-collect">#collect</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-collect">#collect</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-collect%21">#collect!</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-collect2">#collect2</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-cols_len">#cols_len</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-column">#column</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-column%21">#column!</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-column2matrix">#column2matrix</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-column%3D">#column=</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-column_collect">#column_collect</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-column_collect%21">#column_collect!</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-column_size">#column_size</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-column_vectors">#column_vectors</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Enumerable::Probability</span>
+              <a href="Enumerable/Probability.html#method-i-commonality">#commonality</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-compare_by">#compare_by</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-compare_by_row_vectors">#compare_by_row_vectors</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-component">#component</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-component">#component</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-conjugate">#conjugate</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-cos">#cos</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Trigonometry</span>
+              <a href="Math/Trigonometry.html#method-i-cos">#cos</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Trigonometry</span>
+              <a href="Math/Trigonometry.html#method-i-cosh">#cosh</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-cosh">#cosh</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Trigonometry</span>
+              <a href="Math/Trigonometry.html#method-i-cot">#cot</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Trigonometry</span>
+              <a href="Math/Trigonometry.html#method-i-coth">#coth</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-covector">#covector</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-cross_product">#cross_product</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Trigonometry</span>
+              <a href="Math/Trigonometry.html#method-i-csc">#csc</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Trigonometry</span>
+              <a href="Math/Trigonometry.html#method-i-csch">#csch</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Trigonometry</span>
+              <a href="Math/Trigonometry.html#method-i-deg2gon">#deg2gon</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Trigonometry</span>
+              <a href="Math/Trigonometry.html#method-i-deg2rad">#deg2rad</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-i-degenerate%3F">#degenerate?</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Miscellaneous</span>
+              <a href="Math/Miscellaneous.html#method-i-delta">#delta</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-det">#det</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-det_e">#det_e</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-determinant">#determinant</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-determinant_e">#determinant_e</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-i-direction">#direction</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-i-distance">#distance</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-divmod">#divmod</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-divmod_D4">#divmod_D4</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-dot_product">#dot_product</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-each">#each</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-each">#each</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-i-each">#each</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-each2">#each2</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-eigenvaluesJacobi">#eigenvaluesJacobi</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-element">#element</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-element">#element</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-elements_to_f">#elements_to_f</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-elements_to_f">#elements_to_f</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-elements_to_i">#elements_to_i</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-elements_to_i">#elements_to_i</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-elements_to_r">#elements_to_r</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-elements_to_r">#elements_to_r</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-empty%3F">#empty?</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-i-end">#end</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Enumerable::Probability</span>
+              <a href="Enumerable/Probability.html#method-i-entropy">#entropy</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Miscellaneous</span>
+              <a href="Math/Miscellaneous.html#method-i-epsilon">#epsilon</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-i-eql%3F">#eql?</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-eql%3F">#eql?</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-eqn%3F">#eqn?</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Miscellaneous</span>
+              <a href="Math/Miscellaneous.html#method-i-erf">#erf</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Miscellaneous</span>
+              <a href="Math/Miscellaneous.html#method-i-erfc">#erfc</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-i-exclude_begin%3F">#exclude_begin?</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-i-exclude_end%3F">#exclude_end?</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-i-exclude_first%3F">#exclude_first?</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-i-exclude_last%3F">#exclude_last?</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-exp">#exp</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Logarithmic</span>
+              <a href="Math/Logarithmic.html#method-i-exp">#exp</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Logarithmic</span>
+              <a href="Math/Logarithmic.html#method-i-exp10">#exp10</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Logarithmic</span>
+              <a href="Math/Logarithmic.html#method-i-exp2">#exp2</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Miscellaneous</span>
+              <a href="Math/Miscellaneous.html#method-i-factorial">#factorial</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">InfinityClass::Numeric</span>
+              <a href="InfinityClass/Numeric.html#method-i-finite%3F">#finite?</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-i-first">#first</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-i-first_closed">#first_closed</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-i-first_opened">#first_opened</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Probability</span>
+              <a href="Math/Probability.html#method-i-float_equal">#float_equal</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Miscellaneous</span>
+              <a href="Math/Miscellaneous.html#method-i-floor">#floor</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Enumerable::Probability</span>
+              <a href="Enumerable/Probability.html#method-i-frequency">#frequency</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Logarithmic</span>
+              <a href="Math/Logarithmic.html#method-i-frexp">#frexp</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Logarithmic</span>
+              <a href="Math/Logarithmic.html#method-i-gamma">#gamma</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Miscellaneous</span>
+              <a href="Math/Miscellaneous.html#method-i-gcd">#gcd</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-gcd">#gcd</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Probability</span>
+              <a href="Math/Probability.html#method-i-gini_coefficient">#gini_coefficient</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Probability</span>
+              <a href="Math/Probability.html#method-i-gini_coefficient2">#gini_coefficient2</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-givensQ">#givensQ</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-givensR">#givensR</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Trigonometry</span>
+              <a href="Math/Trigonometry.html#method-i-gon2deg">#gon2deg</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Trigonometry</span>
+              <a href="Math/Trigonometry.html#method-i-gon2rad">#gon2rad</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-gram_schmidt">#gram_schmidt</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-gram_schmidtQ">#gram_schmidtQ</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-gram_schmidtR">#gram_schmidtR</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-i-half_closed">#half_closed</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-hash">#hash</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-hash">#hash</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-hash">#hash</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-hessenbergQ">#hessenbergQ</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-hessenbergR">#hessenbergR</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-hessenberg_form_H">#hessenberg_form_H</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-house">#house</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-houseQ">#houseQ</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-houseR">#houseR</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Trigonometry</span>
+              <a href="Math/Trigonometry.html#method-i-hypot">#hypot</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Enumerable::Probability</span>
+              <a href="Enumerable/Probability.html#method-i-ideal_entropy">#ideal_entropy</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-ids">#ids</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-image">#image</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-i-include%3F">#include?</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-index">#index</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">InfinityClass::Numeric</span>
+              <a href="InfinityClass/Numeric.html#method-i-inf%3F">#inf?</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">InfinityClass::Numeric</span>
+              <a href="InfinityClass/Numeric.html#method-i-infinite%3F">#infinite?</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-init_elements">#init_elements</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-init_rows">#init_rows</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-initialize_copy">#initialize_copy</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-initialize_old">#initialize_old</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-inner_product">#inner_product</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-inspect">#inspect</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-inspect">#inspect</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-inspect">#inspect</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-inv">#inv</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-inverse">#inverse</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-inverse">#inverse</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-inverse_from">#inverse_from</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-is_complex%3F">#is_complex?</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-is_quaternion%3F">#is_quaternion?</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-is_real%3F">#is_real?</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-is_unit_vector%3F">#is_unit_vector?</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-is_vector%3F">#is_vector?</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Probability</span>
+              <a href="Math/Probability.html#method-i-kullback_leibler_divergence">#kullback_leibler_divergence</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Probability</span>
+              <a href="Math/Probability.html#method-i-kurtosis">#kurtosis</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-i-last">#last</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-i-last_closed">#last_closed</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-i-last_opened">#last_opened</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-latitude">#latitude</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Miscellaneous</span>
+              <a href="Math/Miscellaneous.html#method-i-lcm">#lcm</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Logarithmic</span>
+              <a href="Math/Logarithmic.html#method-i-ldexp">#ldexp</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-ldiv">#ldiv</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-ldivmod">#ldivmod</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-ldivmod_D4">#ldivmod_D4</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-length">#length</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-i-length">#length</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Logarithmic</span>
+              <a href="Math/Logarithmic.html#method-i-lgamma">#lgamma</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Solvers</span>
+              <a href="Math/Solvers.html#method-i-linsolve">#linsolve</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-lmod">#lmod</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-lmod_D4">#lmod_D4</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Logarithmic</span>
+              <a href="Math/Logarithmic.html#method-i-log">#log</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-log">#log</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Logarithmic</span>
+              <a href="Math/Logarithmic.html#method-i-log10">#log10</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Logarithmic</span>
+              <a href="Math/Logarithmic.html#method-i-log2">#log2</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-longitude">#longitude</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-magnitude">#magnitude</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-map">#map</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-map">#map</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-map2">#map2</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-mapcar">#mapcar</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Probability</span>
+              <a href="Math/Probability.html#method-i-max">#max</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-max">#max</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-i-max">#max</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-max_len_column">#max_len_column</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Probability</span>
+              <a href="Math/Probability.html#method-i-md">#md</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Probability</span>
+              <a href="Math/Probability.html#method-i-mean">#mean</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Probability</span>
+              <a href="Math/Probability.html#method-i-mean_difference">#mean_difference</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Probability</span>
+              <a href="Math/Probability.html#method-i-median">#median</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-i-member%3F">#member?</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-min">#min</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Probability</span>
+              <a href="Math/Probability.html#method-i-min">#min</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-i-min">#min</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-minor">#minor</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">InfinityClass::Numeric</span>
+              <a href="InfinityClass/Numeric.html#method-i-nan%3F">#nan?</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">InfinityClass::Numeric</span>
+              <a href="InfinityClass/Numeric.html#method-i-neginf%3F">#neginf?</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-norm">#norm</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-norm">#norm</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-normF">#normF</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-norm_frobenius">#norm_frobenius</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-norm_inf">#norm_inf</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-normalize">#normalize</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-i-null%3F">#null?</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-i-opened">#opened</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-orthogonal_split">#orthogonal_split</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Probability</span>
+              <a href="Math/Probability.html#method-i-pearson_skewness2">#pearson_skewness2</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-polar">#polar</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">InfinityClass::Numeric</span>
+              <a href="InfinityClass/Numeric.html#method-i-posinf%3F">#posinf?</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Logarithmic</span>
+              <a href="Math/Logarithmic.html#method-i-pow">#pow</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Enumerable::Probability</span>
+              <a href="Enumerable/Probability.html#method-i-probability">#probability</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-proj">#proj</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Probability</span>
+              <a href="Math/Probability.html#method-i-pstddev">#pstddev</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Probability</span>
+              <a href="Math/Probability.html#method-i-pvariance">#pvariance</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-quo">#quo</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-r">#r</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-rank">#rank</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-rank_e">#rank_e</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-rdiv">#rdiv</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-real">#real</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-realSchur">#realSchur</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-real_part">#real_part</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-regular%3F">#regular?</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Probability</span>
+              <a href="Math/Probability.html#method-i-relative_mean_difference">#relative_mean_difference</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-i-reversed">#reversed</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Probability</span>
+              <a href="Math/Probability.html#method-i-rmd">#rmd</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-rmod">#rmod</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-rmod_D4">#rmod_D4</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Logarithmic</span>
+              <a href="Math/Logarithmic.html#method-i-root">#root</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-rotate">#rotate</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-rotate_angle">#rotate_angle</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-round">#round</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-round_D4">#round_D4</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-row">#row</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-row%21">#row!</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-row2matrix">#row2matrix</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-row%3D">#row=</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-row_collect">#row_collect</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-row_collect%21">#row_collect!</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-row_size">#row_size</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-row_vectors">#row_vectors</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Trigonometry</span>
+              <a href="Math/Trigonometry.html#method-i-sec">#sec</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Trigonometry</span>
+              <a href="Math/Trigonometry.html#method-i-sech">#sech</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-i-sentinels">#sentinels</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-set">#set</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-set_component">#set_component</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-set_component">#set_component</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-set_element">#set_element</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-set_element">#set_element</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Miscellaneous</span>
+              <a href="Math/Miscellaneous.html#method-i-sign">#sign</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-sin">#sin</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Trigonometry</span>
+              <a href="Math/Trigonometry.html#method-i-sin">#sin</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Trigonometry</span>
+              <a href="Math/Trigonometry.html#method-i-sinc">#sinc</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-singular%3F">#singular?</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Trigonometry</span>
+              <a href="Math/Trigonometry.html#method-i-sinh">#sinh</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-sinh">#sinh</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-i-size">#size</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-size">#size</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Probability</span>
+              <a href="Math/Probability.html#method-i-skewness">#skewness</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-slice">#slice</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-slice%3D">#slice=</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-slice_set">#slice_set</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Logarithmic</span>
+              <a href="Math/Logarithmic.html#method-i-sqr">#sqr</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-sqrt">#sqrt</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Logarithmic</span>
+              <a href="Math/Logarithmic.html#method-i-sqrt">#sqrt</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Solvers</span>
+              <a href="Math/Solvers.html#method-i-sqsolve">#sqsolve</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-square%3F">#square?</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Probability</span>
+              <a href="Math/Probability.html#method-i-standard_deviation">#standard_deviation</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Probability</span>
+              <a href="Math/Probability.html#method-i-std">#std</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Probability</span>
+              <a href="Math/Probability.html#method-i-stddev">#stddev</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Probability</span>
+              <a href="Math/Probability.html#method-i-stderr">#stderr</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-i-step">#step</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Probability</span>
+              <a href="Math/Probability.html#method-i-sum">#sum</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Probability</span>
+              <a href="Math/Probability.html#method-i-summed_sqdevs">#summed_sqdevs</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-t">#t</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-t">#t</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-tan">#tan</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Trigonometry</span>
+              <a href="Math/Trigonometry.html#method-i-tan">#tan</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Trigonometry</span>
+              <a href="Math/Trigonometry.html#method-i-tanh">#tanh</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-tanh">#tanh</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Probability</span>
+              <a href="Math/Probability.html#method-i-theil_index">#theil_index</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">InfinityClass</span>
+              <a href="InfinityClass.html#method-i-times">#times</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-to_a">#to_a</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-to_a">#to_a</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-to_a">#to_a</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-to_c">#to_c</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-to_c2">#to_c2</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">InfinityClass</span>
+              <a href="InfinityClass.html#method-i-to_f">#to_f</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">InfinityClass</span>
+              <a href="InfinityClass.html#method-i-to_s">#to_s</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-to_s">#to_s</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-to_s">#to_s</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-to_s">#to_s</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-to_s">#to_s</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-to_v">#to_v</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-tr">#tr</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-trace">#trace</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-transpose">#transpose</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Vector</span>
+              <a href="Vector.html#method-i-transpose">#transpose</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-unit_vector">#unit_vector</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Probability</span>
+              <a href="Math/Probability.html#method-i-var">#var</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Probability</span>
+              <a href="Math/Probability.html#method-i-variance">#variance</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Math::Probability</span>
+              <a href="Math/Probability.html#method-i-variance2">#variance2</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Quaternion</span>
+              <a href="Quaternion.html#method-i-vector">#vector</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-wrap%3D">#wrap=</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Matrix</span>
+              <a href="Matrix.html#method-i-wraplate">#wraplate</a>
+            </li>
+          
+            
+            <li class="method" style="clear: both;">
+              <span class="method-parent-aside">Interval</span>
+              <a href="Interval.html#method-i-%7E">#~</a>
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+
+    <div id="validator-badges">
+      
+      <div style="float: right; margin-right: 5px;">
+        <a href="http://validator.w3.org/check/referer"><img src="./assets/icon/check.png" alt="[Validate]" height="16" width="16" /></a>
+      </div>
+      Generated with <a href="http://rubyworks.github.com/rdazzle">RDazzle Newfish</a> 1.3.0
+      <br/><br/>
+    </div>
+  </div>
+
+  <!-- .file-popup was wrapped:
+    <div id="documentation">
+      
+      <div class="description">
+          ... file.description ...
+      </div>
+      
+    </div>
+   So maybe that css is no longer needed.
+   -->
+
+  <div id="documentation">
+    <pre>
+                          Apache License
+                     Version 2.0, January 2004
+                  http://www.apache.org/licenses/
+</pre>
+<p>
+TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+</p>
+<ol>
+<li><p>
+Definitions.
+</p>
+<p>
+&#8220;License&#8221; shall mean the terms and conditions for use,
+reproduction, and distribution as defined by Sections 1 through 9 of this
+document.
+</p>
+<p>
+&#8220;Licensor&#8221; shall mean the copyright owner or entity authorized
+by the copyright owner that is granting the License.
+</p>
+<p>
+&#8220;Legal Entity&#8221; shall mean the union of the acting entity and
+all other entities that control, are controlled by, or are under common
+control with that entity. For the purposes of this definition,
+&#8220;control&#8221; means (i) the power, direct or indirect, to cause the
+direction or management of such entity, whether by contract or otherwise,
+or (ii) ownership of fifty percent (50%) or more of the outstanding shares,
+or (iii) beneficial ownership of such entity.
+</p>
+<p>
+&#8220;You&#8221; (or &#8220;Your&#8221;) shall mean an individual or Legal
+Entity exercising permissions granted by this License.
+</p>
+<p>
+&#8220;Source&#8221; form shall mean the preferred form for making
+modifications, including but not limited to software source code,
+documentation source, and configuration files.
+</p>
+<p>
+&#8220;Object&#8221; form shall mean any form resulting from mechanical
+transformation or translation of a Source form, including but not limited
+to compiled object code, generated documentation, and conversions to other
+media types.
+</p>
+<p>
+&#8220;Work&#8221; shall mean the work of authorship, whether in Source or
+<a href="Object.html">Object</a> form, made available under the License, as
+indicated by a copyright notice that is included in or attached to the work
+(an example is provided in the Appendix below).
+</p>
+<p>
+&#8220;Derivative Works&#8221; shall mean any work, whether in Source or <a
+href="Object.html">Object</a> form, that is based on (or derived from) the
+Work and for which the editorial revisions, annotations, elaborations, or
+other modifications represent, as a whole, an original work of authorship.
+For the purposes of this License, Derivative Works shall not include works
+that remain separable from, or merely link (or bind by name) to the
+interfaces of, the Work and Derivative Works thereof.
+</p>
+<p>
+&#8220;Contribution&#8221; shall mean any work of authorship, including the
+original version of the Work and any modifications or additions to that
+Work or Derivative Works thereof, that is intentionally submitted to
+Licensor for inclusion in the Work by the copyright owner or by an
+individual or Legal Entity authorized to submit on behalf of the copyright
+owner. For the purposes of this definition, &#8220;submitted&#8221; means
+any form of electronic, verbal, or written communication sent to the
+Licensor or its representatives, including but not limited to communication
+on electronic mailing lists, source code control systems, and issue
+tracking systems that are managed by, or on behalf of, the Licensor for the
+purpose of discussing and improving the Work, but excluding communication
+that is conspicuously marked or otherwise designated in writing by the
+copyright owner as &#8220;Not a Contribution.&#8220;
+</p>
+<p>
+&#8220;Contributor&#8221; shall mean Licensor and any individual or Legal
+Entity on behalf of whom a Contribution has been received by Licensor and
+subsequently incorporated within the Work.
+</p>
+</li>
+<li><p>
+Grant of Copyright License. Subject to the terms and conditions of this
+License, each Contributor hereby grants to You a perpetual, worldwide,
+non-exclusive, no-charge, royalty-free, irrevocable copyright license to
+reproduce, prepare Derivative Works of, publicly display, publicly perform,
+sublicense, and distribute the Work and such Derivative Works in Source or
+<a href="Object.html">Object</a> form.
+</p>
+</li>
+<li><p>
+Grant of Patent License. Subject to the terms and conditions of this
+License, each Contributor hereby grants to You a perpetual, worldwide,
+non-exclusive, no-charge, royalty-free, irrevocable (except as stated in
+this section) patent license to make, have made, use, offer to sell, sell,
+import, and otherwise transfer the Work, where such license applies only to
+those patent claims licensable by such Contributor that are necessarily
+infringed by their Contribution(s) alone or by combination of their
+Contribution(s) with the Work to which such Contribution(s) was submitted.
+If You institute patent litigation against any entity (including a
+cross-claim or counterclaim in a lawsuit) alleging that the Work or a
+Contribution incorporated within the Work constitutes direct or
+contributory patent infringement, then any patent licenses granted to You
+under this License for that Work shall terminate as of the date such
+litigation is filed.
+</p>
+</li>
+<li><p>
+Redistribution. You may reproduce and distribute copies of the Work or
+Derivative Works thereof in any medium, with or without modifications, and
+in Source or <a href="Object.html">Object</a> form, provided that You meet
+the following conditions:
+</p>
+<p>
+(a) You must give any other recipients of the Work or
+</p>
+<pre>
+    Derivative Works a copy of this License; and
+</pre>
+<p>
+(b) You must cause any modified files to carry prominent notices
+</p>
+<pre>
+    stating that You changed the files; and
+</pre>
+<p>
+&#169; You must retain, in the Source form of any Derivative Works
+</p>
+<pre>
+    that You distribute, all copyright, patent, trademark, and
+    attribution notices from the Source form of the Work,
+    excluding those notices that do not pertain to any part of
+    the Derivative Works; and
+</pre>
+<p>
+(d) If the Work includes a &#8220;NOTICE&#8221; text file as part of its
+</p>
+<pre>
+    distribution, then any Derivative Works that You distribute must
+    include a readable copy of the attribution notices contained
+    within such NOTICE file, excluding those notices that do not
+    pertain to any part of the Derivative Works, in at least one
+    of the following places: within a NOTICE text file distributed
+    as part of the Derivative Works; within the Source form or
+    documentation, if provided along with the Derivative Works; or,
+    within a display generated by the Derivative Works, if and
+    wherever such third-party notices normally appear. The contents
+    of the NOTICE file are for informational purposes only and
+    do not modify the License. You may add Your own attribution
+    notices within Derivative Works that You distribute, alongside
+    or as an addendum to the NOTICE text from the Work, provided
+    that such additional attribution notices cannot be construed
+    as modifying the License.
+</pre>
+<p>
+You may add Your own copyright statement to Your modifications and may
+provide additional or different license terms and conditions for use,
+reproduction, or distribution of Your modifications, or for any such
+Derivative Works as a whole, provided Your use, reproduction, and
+distribution of the Work otherwise complies with the conditions stated in
+this License.
+</p>
+</li>
+<li><p>
+Submission of Contributions. Unless You explicitly state otherwise, any
+Contribution intentionally submitted for inclusion in the Work by You to
+the Licensor shall be under the terms and conditions of this License,
+without any additional terms or conditions. Notwithstanding the above,
+nothing herein shall supersede or modify the terms of any separate license
+agreement you may have executed with Licensor regarding such Contributions.
+</p>
+</li>
+<li><p>
+Trademarks. This License does not grant permission to use the trade names,
+trademarks, service marks, or product names of the Licensor, except as
+required for reasonable and customary use in describing the origin of the
+Work and reproducing the content of the <a href="NOTICE.html">NOTICE</a>
+file.
+</p>
+</li>
+<li><p>
+Disclaimer of Warranty. Unless required by applicable law or agreed to in
+writing, Licensor provides the Work (and each Contributor provides its
+Contributions) on an &#8220;AS IS&#8221; BASIS, WITHOUT WARRANTIES OR
+CONDITIONS OF ANY KIND, either express or implied, including, without
+limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT,
+MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely
+responsible for determining the appropriateness of using or redistributing
+the Work and assume any risks associated with Your exercise of permissions
+under this License.
+</p>
+</li>
+<li><p>
+Limitation of Liability. In no event and under no legal theory, whether in
+tort (including negligence), contract, or otherwise, unless required by
+applicable law (such as deliberate and grossly negligent acts) or agreed to
+in writing, shall any Contributor be liable to You for damages, including
+any direct, indirect, special, incidental, or consequential damages of any
+character arising as a result of this License or out of the use or
+inability to use the Work (including but not limited to damages for loss of
+goodwill, work stoppage, computer failure or malfunction, or any and all
+other commercial damages or losses), even if such Contributor has been
+advised of the possibility of such damages.
+</p>
+</li>
+<li><p>
+Accepting Warranty or Additional Liability. While redistributing the Work
+or Derivative Works thereof, You may choose to offer, and charge a fee for,
+acceptance of support, warranty, indemnity, or other liability obligations
+and/or rights consistent with this License. However, in accepting such
+obligations, You may act only on Your own behalf and on Your sole
+responsibility, not on behalf of any other Contributor, and only if You
+agree to indemnify, defend, and hold each Contributor harmless for any
+liability incurred by, or claims asserted against, such Contributor by
+reason of your accepting any such warranty or additional liability.
+</p>
+</li>
+</ol>
+<p>
+END OF TERMS AND CONDITIONS
+</p>
+<p>
+APPENDIX: How to apply the Apache License to your work.
+</p>
+<pre>
+   To apply the Apache License to your work, attach the following
+   boilerplate notice, with the fields enclosed by brackets &quot;[]&quot;
+   replaced with your own identifying information. (Don't include
+   the brackets!)  The text should be enclosed in the appropriate
+   comment syntax for the file format. We also recommend that a
+   file or class name and description of purpose be included on the
+   same &quot;printed page&quot; as the copyright notice for easier
+   identification within third-party archives.
+</pre>
+<p>
+Copyright [yyyy] [name of copyright owner]
+</p>
+<p>
+Licensed under the Apache License, Version 2.0 (the &#8220;License&#8221;);
+you may not use this file except in compliance with the License. You may
+obtain a copy of the License at
+</p>
+<pre>
+    http://www.apache.org/licenses/LICENSE-2.0
+</pre>
+<p>
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an &#8220;AS IS&#8221;
+BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+implied. See the License for the specific language governing permissions
+and limitations under the License.
+</p>
+
+  </div>
+
+</div>
+</body>
+</html>
+

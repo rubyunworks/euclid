@@ -1,0 +1,1640 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+  <title>Class: Interval</title>
+
+  
+    <link rel="SHORTCUT ICON" href="./assets/icon/class.png">
+  
+
+  <link type="text/css" rel="stylesheet" href="./assets/rdoc.css" media="screen" />
+  <link type="text/css" rel="stylesheet" href="./assets/highlight/styles/github.css" title="GitHub" />
+
+  <script type="text/javascript" charset="utf-8" src="./assets/jquery.js"></script>
+  <script type="text/javascript" charset="utf-8" src="./assets/highlight/highlight.pack.js"></script>
+  <script type="text/javascript" charset="utf-8" src="./assets/quicksearch.js"></script>
+  <script type="text/javascript" charset="utf-8" src="./assets/main.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready( function() {
+      $('#documentation pre').wrapInner('<code></code>');
+      hljs.tabReplace = '    ';
+      hljs.initHighlightingOnLoad('ruby');
+
+	    hookSourceViews();
+	    hookDebuggingToggle();
+	    hookQuickSearch();
+	    highlightLocationTarget();
+
+	    $('ul.link-list a').bind( "click", highlightClickTarget );
+    });
+  </script>
+</head>
+<body class="class">
+<div id="main">
+
+  <div class="head">
+    <h1>
+      
+        <img src="./assets/icon/class.png" align="absmiddle">&nbsp;
+      
+      <a href="./index.html">Euclid</a>&nbsp;
+      <a href="/">Interval</a>
+    </h1>
+  </div>
+
+  <div id="metadata">
+    <div id="project-metadata">
+
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li class="file"><a href="./lib/euclid/interval_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/euclid/interval.rb">lib/euclid/interval.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      <!-- What about Git info, or Hg info? This seems almost silly, albeit kind of cool. -->
+      <!-- TODO: generalize this for all SCMs -->
+
+      
+    </div>
+
+    <div id="class-metadata">
+
+      <!-- Parent Class -->
+      
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        <ul>
+          
+          <!-- why was this class="link" ? -->
+          <li class="class"><a href="Object.html">Object</a></li>
+          
+        </ul>
+      </div>
+      
+
+      <!-- Namespace Contents -->
+      
+
+      <!-- Method Quickref -->
+      
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+            
+            <li class="singleton">
+              <a href="#method-c-%5B%5D">::[]</a>
+            </li>
+          
+            
+            <li class="singleton">
+              <a href="#method-c-new">::new</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-%2B%40">#+@</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i--%40">#-@</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-%3D%3D%3D">#===</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-begin">#begin</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-closed">#closed</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-degenerate%3F">#degenerate?</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-direction">#direction</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-distance">#distance</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-each">#each</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-end">#end</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-eql%3F">#eql?</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-exclude_begin%3F">#exclude_begin?</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-exclude_end%3F">#exclude_end?</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-exclude_first%3F">#exclude_first?</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-exclude_last%3F">#exclude_last?</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-first">#first</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-first_closed">#first_closed</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-first_opened">#first_opened</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-half_closed">#half_closed</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-include%3F">#include?</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-last">#last</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-last_closed">#last_closed</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-last_opened">#last_opened</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-length">#length</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-max">#max</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-member%3F">#member?</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-min">#min</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-null%3F">#null?</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-opened">#opened</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-reversed">#reversed</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-sentinels">#sentinels</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-size">#size</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-step">#step</a>
+            </li>
+          
+            
+            <li class="method">
+              <a href="#method-i-%7E">#~</a>
+            </li>
+          
+        </ul>
+      </div>
+      
+
+      <!-- Included Modules -->
+      
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li class="module"><span class="include">Multiton</span></li>
+        
+        
+        
+          <li class="module"><span class="include">Enumerable::Arguments</span></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Information</h3>
+        <ul>
+        
+          <li class="file"><a href="./NOTICE.html">NOTICE</a></li>
+        
+          <li class="file"><a href="./HISTORY.html">HISTORY</a></li>
+        
+          <li class="file"><a href="./LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="./README.html">README</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class Index
+          <span class="search-toggle"><img src="./assets/icon/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <!-- classpage.html : classes -->
+        <ul class="link-list">
+        
+          <li class="class"><a href="./Matrix.html">Matrix</a></li>
+        
+          <li class="module"><a href="./Matrix/Givens.html">Matrix::Givens</a></li>
+        
+          <li class="module"><a href="./Matrix/Hessenberg.html">Matrix::Hessenberg</a></li>
+        
+          <li class="module"><a href="./Matrix/Householder.html">Matrix::Householder</a></li>
+        
+          <li class="module"><a href="./Matrix/Jacobi.html">Matrix::Jacobi</a></li>
+        
+          <li class="module"><a href="./Matrix/LU.html">Matrix::LU</a></li>
+        
+          <li class="module"><a href="./Matrix/MMatrix.html">Matrix::MMatrix</a></li>
+        
+          <li class="module"><a href="./Math/Finance.html">Math::Finance</a></li>
+        
+          <li class="module"><a href="./Math/Logarithmic.html">Math::Logarithmic</a></li>
+        
+          <li class="module"><a href="./Math/Miscellaneous.html">Math::Miscellaneous</a></li>
+        
+          <li class="module"><a href="./Math/Probability.html">Math::Probability</a></li>
+        
+          <li class="module"><a href="./Math/Solvers.html">Math::Solvers</a></li>
+        
+          <li class="module"><a href="./Math/Trigonometry.html">Math::Trigonometry</a></li>
+        
+          <li class="module"><a href="./Euclid.html">Euclid</a></li>
+        
+          <li class="class"><a href="./Euclid/Matrix.html">Euclid::Matrix</a></li>
+        
+          <li class="module"><a href="./Enumerable/Probability.html">Enumerable::Probability</a></li>
+        
+          <li class="class"><a href="./InfinityClass.html">InfinityClass</a></li>
+        
+          <li class="class"><a href="./InfinityClass/Numeric.html">InfinityClass::Numeric</a></li>
+        
+          <li class="class"><a href="./Vector.html">Vector</a></li>
+        
+          <li class="module"><a href="./Vector/Norm.html">Vector::Norm</a></li>
+        
+          <li class="class"><a href="./Interval.html">Interval</a></li>
+        
+          <li class="class"><a href="./Object.html">Object</a></li>
+        
+          <li class="class"><a href="./Quaternion.html">Quaternion</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+    </div>
+
+    <div id="validator-badges">
+      
+      <div style="float: right; margin-right: 5px;">
+        <a href="http://validator.w3.org/check/referer"><img src="./assets/icon/check.png" alt="[Validate]" height="16" width="16" /></a>
+      </div>
+      Generated with <a href="http://rubyworks.github.com/rdazzle">RDazzle Newfish</a> 1.3.0
+      <br/><br/>
+    </div>
+  </div>
+
+  <div id="documentation">
+
+    <div id="description">
+      
+
+      <h1><a href="Interval.html">Interval</a></h1>
+<p>
+While Ruby support the Range class out of the box, is does not quite
+fullfil the role od a real <a href="Interval.html">Interval</a> class. For
+instance, it does not support excluding the front sentinel. This is because
+Range also tries to do triple duty as a simple Sequence and as a simple
+Tuple-Pair, thus limiting its potential as an <a
+href="Interval.html">Interval</a>. The <a href="Interval.html">Interval</a>
+class remedies the situation by commiting to interval behavior, and then
+extends the class&#8217; capabilites beyond that of the standard Range in
+ways that naturally fall out of that.
+</p>
+<p>
+Range depends on two methods: succ and #<=>. If numeric ranges were the
+only concern, those could just as well be #+ and #<=>, but esoteric forms
+make that unfeasible &#8212;the obvious example being a String range. But a
+proper <a href="Interval.html">Interval</a> class requires mathematical
+continuation, thus the <a href="Interval.html">Interval</a> depends on #+
+and #<=>, as well as #- as the inverse of #+.
+</p>
+<pre>
+  i = Interval.new(1,5)
+  i.to_a       #=&gt; [1,2,3,4,5]
+
+  i = Interval[0,5]
+  i.to_a(2)    #=&gt; [0,2,4]
+
+  i = Interval[1,5]
+  i.to_a(-1)   #=&gt; [5,4,3,2,1]
+
+  i = Interval[1,3]
+  i.to_a(1,2)  #=&gt; [1.0,1.5,2.0,2.5,3.0]</pre>
+
+    </div>
+
+    <!-- Constants -->
+    
+
+    <!-- Attributes -->
+    
+
+    <!-- Methods -->
+    
+    <div id="public-class-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="--method" class="method-detail ">
+        <a name="method-c-%5B%5D"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">[]</span><span
+            class="method-args">( *args )</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/euclid/interval.rb, line 90</span>
+90:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-operator">[]</span>( *<span class="ruby-identifier">args</span> )
+91:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">new</span>( *<span class="ruby-identifier">args</span> )
+92:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="new-method" class="method-detail ">
+        <a name="method-c-new"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">new</span><span
+            class="method-args">(first, last, exclude_first=false, exclude_last=false )</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="new-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/interval.rb, line 95</span>
+ 95:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>, <span class="ruby-identifier">exclude_first</span>=<span class="ruby-keyword kw">false</span>, <span class="ruby-identifier">exclude_last</span>=<span class="ruby-keyword kw">false</span> )
+ 96:     <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;bad value for interval&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">first</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">last</span>.<span class="ruby-identifier">class</span>
+ 97:     <span class="ruby-ivar">@first</span> = <span class="ruby-identifier">first</span>
+ 98:     <span class="ruby-ivar">@last</span> = <span class="ruby-identifier">last</span>
+ 99:     <span class="ruby-ivar">@exclude_first</span> = <span class="ruby-identifier">exclude_first</span>
+100:     <span class="ruby-ivar">@exclude_last</span> = <span class="ruby-identifier">exclude_last</span>
+101:     <span class="ruby-ivar">@direction</span> = (<span class="ruby-ivar">@last</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-ivar">@first</span>)
+102:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+    </div>
+  
+    <div id="public-instance-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="--method" class="method-detail ">
+        <a name="method-i-%2B%40"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">+@</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Unary shorthands. These return a new interval exclusive of first, last or
+both sentinels, repectively.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/interval.rb, line 161</span>
+161:   <span class="ruby-keyword kw">def</span> <span class="ruby-operator">+@</span> ; <span class="ruby-constant">Interval</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>, <span class="ruby-keyword kw">true</span>, <span class="ruby-keyword kw">false</span>) ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="--method" class="method-detail ">
+        <a name="method-i--%40"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">-@</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/interval.rb, line 162</span>
+162:   <span class="ruby-keyword kw">def</span> <span class="ruby-operator">-@</span> ; <span class="ruby-constant">Interval</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>, <span class="ruby-keyword kw">false</span>, <span class="ruby-keyword kw">true</span>) ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="--method" class="method-detail method-alias">
+        <a name="method-i-%3D%3D%3D"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">===</span><span
+            class="method-args">(x)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="begin-method" class="method-detail method-alias">
+        <a name="method-i-begin"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">begin</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+(IMHO) these should be deprectated
+</p>
+          
+
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="closed-method" class="method-detail ">
+        <a name="method-i-closed"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">closed</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Returns a new interval inclusive of of both sentinels.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="closed-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/interval.rb, line 141</span>
+141:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">closed</span>; <span class="ruby-constant">Interval</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@first</span>, <span class="ruby-ivar">@last</span>, <span class="ruby-keyword kw">true</span>, <span class="ruby-keyword kw">true</span>) ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="degenerate--method" class="method-detail ">
+        <a name="method-i-degenerate%3F"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">degenerate?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Returns <tt>true</tt> if the start and end sentinels are equal and the
+interval is closed; otherwise <tt>false</tt>.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="degenerate--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/interval.rb, line 127</span>
+127:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">degenerate?</span> ; <span class="ruby-ivar">@direction</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-keyword kw">and</span> <span class="ruby-operator">!</span> (<span class="ruby-ivar">@exclusive_first</span> <span class="ruby-keyword kw">or</span> <span class="ruby-ivar">@exclusive_last</span>) ;  <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="direction-method" class="method-detail ">
+        <a name="method-i-direction"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">direction</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Returns the direction of the interval indicated by +1, 0 or -1.
+</p>
+<pre>
+  (1..5).direction  #=&gt; 1
+  (5..1).direction  #=&gt; -1
+  (1..1).direction  #=&gt; 0</pre>
+          
+
+          
+          <div class="method-source-code"
+            id="direction-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/interval.rb, line 138</span>
+138:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">direction</span> ; <span class="ruby-ivar">@direction</span> ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="distance-method" class="method-detail ">
+        <a name="method-i-distance"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">distance</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Returns the length of the interval as the difference between the first and
+last elements. Returns <tt>nil</tt> if the sentinal objects do not support
+distance comparison (<a
+href="Interval.html#method-i-distance">distance</a>). TODO: Add <tt>n</tt>
+parameter to count segmentations like those produced by <a
+href="Interval.html#method-i-each">each</a>.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="distance-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/interval.rb, line 177</span>
+177:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">distance</span>
+178:     <span class="ruby-ivar">@last</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@first</span>
+179:     <span class="ruby-comment cmt">#if @last.respond_to?( :distance )</span>
+180:     <span class="ruby-comment cmt">#  @last.distance( @first )</span>
+181:     <span class="ruby-comment cmt">#else</span>
+182:     <span class="ruby-comment cmt">#  #self.to_a.length</span>
+183:     <span class="ruby-comment cmt">#end</span>
+184:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Interval.html#method-i-length">length</a>, <a href="Interval.html#method-i-size">size</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="each-method" class="method-detail ">
+        <a name="method-i-each"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">each</span><span
+            class="method-args">(n=1, d=nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Iterates over the interval, passing each _n_th element to the block. If n
+is not given then n defaults to 1. Each _n_th step is determined by
+invoking +++ or <tt>-</tt> n, depending on the direction of the interval.
+If n is negative the iteration is preformed in reverse form end sentinal to
+front sentinal. A second parameter, d, can be given in which case the
+applied step is calculated as a fraction of the interval&#8217;s length
+times n / d. This allows iteration over the whole interval in equal sized
+segments.
+</p>
+<pre>
+  1..5.each { |e| ... }        #=&gt; 1 2 3 4 5
+  1..5.each(2) { |e| ... }     #=&gt; 1 3 5
+  1..5.each(1,2) { |e| ... }   #=&gt; 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 5.0</pre>
+          
+
+          
+          <div class="method-source-code"
+            id="each-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/interval.rb, line 241</span>
+241:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">each</span>(<span class="ruby-identifier">n</span>=<span class="ruby-value">1</span>, <span class="ruby-identifier">d</span>=<span class="ruby-keyword kw">nil</span>)  <span class="ruby-comment cmt"># :yield:</span>
+242:     <span class="ruby-keyword kw">return</span> (<span class="ruby-identifier">n</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@last</span> <span class="ruby-operator">:</span> <span class="ruby-ivar">@first</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">degenerate?</span>  <span class="ruby-comment cmt"># is this right for all values of n ?</span>
+243:     <span class="ruby-identifier">s</span> = <span class="ruby-identifier">d</span> <span class="ruby-operator">?</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">length</span>.<span class="ruby-identifier">to_f</span> * (<span class="ruby-identifier">n</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">d</span>.<span class="ruby-identifier">to_f</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">n</span>.<span class="ruby-identifier">abs</span>
+244:     <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;Cannot iterate over zero length steps.&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">s</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+245:     <span class="ruby-identifier">s</span> = <span class="ruby-identifier">s</span> * <span class="ruby-ivar">@direction</span>
+246:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+247:       <span class="ruby-identifier">e</span> = <span class="ruby-ivar">@exclude_last</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@last</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">s</span> <span class="ruby-operator">:</span> <span class="ruby-ivar">@last</span>
+248:       <span class="ruby-comment cmt">#e = @exclude_last ? @last.pred(s) : @last</span>
+249:       <span class="ruby-identifier">t</span> = <span class="ruby-ivar">@exclude_last</span> <span class="ruby-operator">?</span> <span class="ruby-value">1</span> <span class="ruby-operator">:</span> <span class="ruby-value">0</span>
+250:       <span class="ruby-comment cmt">#while e.cmp(@first) &gt;= t</span>
+251:       <span class="ruby-keyword kw">while</span> (<span class="ruby-identifier">e</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-ivar">@first</span>) <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">t</span>
+252:         <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">e</span>)
+253:         <span class="ruby-identifier">e</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">s</span>
+254:         <span class="ruby-comment cmt">#e = e.pred(s)</span>
+255:       <span class="ruby-keyword kw">end</span>
+256:     <span class="ruby-keyword kw">else</span>
+257:       <span class="ruby-identifier">e</span> = <span class="ruby-ivar">@exclude_first</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@first</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">s</span> <span class="ruby-operator">:</span> <span class="ruby-ivar">@first</span>
+258:       <span class="ruby-comment cmt">#e = @exclude_first ? @first.succ(s) : @first</span>
+259:       <span class="ruby-identifier">t</span> = <span class="ruby-ivar">@exclude_last</span> <span class="ruby-operator">?</span> <span class="ruby-value">1</span> <span class="ruby-operator">:</span> <span class="ruby-value">0</span>
+260:       <span class="ruby-comment cmt">#while e.cmp(@last) &lt;= t</span>
+261:       <span class="ruby-keyword kw">while</span> (<span class="ruby-identifier">e</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-ivar">@last</span>) <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">t</span>
+262:         <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">e</span>)
+263:         <span class="ruby-identifier">e</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">s</span>
+264:         <span class="ruby-comment cmt">#e = e.succ(s)</span>
+265:       <span class="ruby-keyword kw">end</span>
+266:     <span class="ruby-keyword kw">end</span>
+267:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Interval.html#method-i-step">step</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="end-method" class="method-detail method-alias">
+        <a name="method-i-end"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">end</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="eql--method" class="method-detail ">
+        <a name="method-i-eql%3F"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">eql?</span><span
+            class="method-args">(other)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Compares two intervals to see if they are equal
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="eql--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/interval.rb, line 276</span>
+276:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">eql?</span>(<span class="ruby-identifier">other</span>)
+277:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@first</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">first</span>
+278:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@last</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">last</span>
+279:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@exclude_first</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">exclude_first?</span>
+280:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@exclude_last</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">exclude_last?</span>
+281:     <span class="ruby-keyword kw">true</span>
+282:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="exclude-begin--method" class="method-detail method-alias">
+        <a name="method-i-exclude_begin%3F"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">exclude_begin?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="exclude-end--method" class="method-detail method-alias">
+        <a name="method-i-exclude_end%3F"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">exclude_end?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="exclude-first--method" class="method-detail ">
+        <a name="method-i-exclude_first%3F"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">exclude_first?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="exclude-first--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/interval.rb, line 117</span>
+117:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">exclude_first?</span> ; <span class="ruby-ivar">@exclude_first</span> ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Interval.html#method-i-exclude_begin%3F">exclude_begin?</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="exclude-last--method" class="method-detail ">
+        <a name="method-i-exclude_last%3F"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">exclude_last?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="exclude-last--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/interval.rb, line 118</span>
+118:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">exclude_last?</span> ; <span class="ruby-ivar">@exclude_last</span> ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Interval.html#method-i-exclude_end%3F">exclude_end?</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="first-method" class="method-detail ">
+        <a name="method-i-first"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">first</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Returns the first or last sentinal of the interval.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="first-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/interval.rb, line 113</span>
+113:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">first</span> ; <span class="ruby-ivar">@first</span> ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Interval.html#method-i-begin">begin</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="first-closed-method" class="method-detail ">
+        <a name="method-i-first_closed"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">first_closed</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Returns a new interval with one of the two sentinels opened or closed
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="first-closed-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/interval.rb, line 154</span>
+154:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">first_closed</span> ; <span class="ruby-constant">Interval</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@first</span>, <span class="ruby-ivar">@last</span>, <span class="ruby-keyword kw">false</span>, <span class="ruby-keyword kw">true</span>) ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="first-opened-method" class="method-detail ">
+        <a name="method-i-first_opened"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">first_opened</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="first-opened-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/interval.rb, line 156</span>
+156:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">first_opened</span> ; <span class="ruby-constant">Interval</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@first</span>, <span class="ruby-ivar">@last</span>, <span class="ruby-keyword kw">true</span>, <span class="ruby-keyword kw">false</span>) ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="half-closed-method" class="method-detail ">
+        <a name="method-i-half_closed"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">half_closed</span><span
+            class="method-args">(e=false)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Returns a new interval with either the first or the last sentinel
+exclusive. If the parameter is false, the deafult, then the first sentinel
+is excluded; if the parameter is true, the last sentinel is excluded.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="half-closed-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/interval.rb, line 149</span>
+149:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">half_closed</span>(<span class="ruby-identifier">e</span>=<span class="ruby-keyword kw">false</span>)
+150:     <span class="ruby-identifier">e</span> <span class="ruby-operator">?</span> <span class="ruby-constant">Interval</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@first</span>, <span class="ruby-ivar">@last</span>, <span class="ruby-keyword kw">true</span>, <span class="ruby-keyword kw">false</span>) <span class="ruby-operator">:</span> <span class="ruby-constant">Interval</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@first</span>, <span class="ruby-ivar">@last</span>, <span class="ruby-keyword kw">false</span>, <span class="ruby-keyword kw">true</span>)
+151:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="include--method" class="method-detail ">
+        <a name="method-i-include%3F"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">include?</span><span
+            class="method-args">(x)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Returns true or false if the element is part of the interval.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="include--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/interval.rb, line 199</span>
+199:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">include?</span>(<span class="ruby-identifier">x</span>)
+200:     <span class="ruby-comment cmt"># todo: infinity?</span>
+201:     <span class="ruby-identifier">tf</span> = <span class="ruby-identifier">exclude_first?</span> <span class="ruby-operator">?</span> <span class="ruby-value">1</span> <span class="ruby-operator">:</span> <span class="ruby-value">0</span>
+202:     <span class="ruby-identifier">tl</span> = <span class="ruby-identifier">exclude_last?</span> <span class="ruby-operator">?</span> <span class="ruby-value">1</span> <span class="ruby-operator">:</span> <span class="ruby-value">0</span>
+203:     (<span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">first</span>) <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">tf</span> <span class="ruby-keyword kw">and</span> (<span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">last</span>) <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">tl</span>
+204:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Interval.html#method-i-%3D%3D%3D">===</a>, <a href="Interval.html#method-i-member%3F">member?</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="last-method" class="method-detail ">
+        <a name="method-i-last"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">last</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="last-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/interval.rb, line 114</span>
+114:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">last</span> ; <span class="ruby-ivar">@last</span> ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Interval.html#method-i-end">end</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="last-closed-method" class="method-detail ">
+        <a name="method-i-last_closed"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">last_closed</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="last-closed-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/interval.rb, line 155</span>
+155:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">last_closed</span> ; <span class="ruby-constant">Interval</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@first</span>, <span class="ruby-ivar">@last</span>, <span class="ruby-keyword kw">true</span>, <span class="ruby-keyword kw">false</span>) ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="last-opened-method" class="method-detail ">
+        <a name="method-i-last_opened"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">last_opened</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="last-opened-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/interval.rb, line 157</span>
+157:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">last_opened</span> ; <span class="ruby-constant">Interval</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@first</span>, <span class="ruby-ivar">@last</span>, <span class="ruby-keyword kw">false</span>, <span class="ruby-keyword kw">true</span>) ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="length-method" class="method-detail method-alias">
+        <a name="method-i-length"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">length</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="max-method" class="method-detail ">
+        <a name="method-i-max"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">max</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Returns the greater of the first and last sentinals.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="max-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/interval.rb, line 194</span>
+194:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">max</span>
+195:     ((<span class="ruby-ivar">@first</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-ivar">@last</span>) <span class="ruby-operator">==</span> <span class="ruby-value">1</span>) <span class="ruby-operator">?</span> <span class="ruby-ivar">@first</span> <span class="ruby-operator">:</span> <span class="ruby-ivar">@last</span>
+196:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="member--method" class="method-detail method-alias">
+        <a name="method-i-member%3F"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">member?</span><span
+            class="method-args">(x)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="min-method" class="method-detail ">
+        <a name="method-i-min"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">min</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Returns the lesser of the first and last sentinals.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="min-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/interval.rb, line 189</span>
+189:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">min</span>
+190:     ((<span class="ruby-ivar">@first</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-ivar">@last</span>) <span class="ruby-operator">==</span> <span class="ruby-value">1</span>) <span class="ruby-operator">?</span> <span class="ruby-ivar">@first</span> <span class="ruby-operator">:</span> <span class="ruby-ivar">@last</span>
+191:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="null--method" class="method-detail ">
+        <a name="method-i-null%3F"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">null?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Returns <tt>true</tt> if the start and end sentinels are equal and the
+interval is open; otherwise <tt>false</tt>.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="null--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/interval.rb, line 130</span>
+130:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">null?</span> ; <span class="ruby-ivar">@direction</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-keyword kw">and</span> <span class="ruby-ivar">@exclusive_first</span> <span class="ruby-keyword kw">and</span> <span class="ruby-ivar">@exclusive_last</span> ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="opened-method" class="method-detail ">
+        <a name="method-i-opened"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">opened</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Returns a new interval exclusive of both sentinels.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="opened-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/interval.rb, line 144</span>
+144:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">opened</span>; <span class="ruby-constant">Interval</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@first</span>, <span class="ruby-ivar">@last</span>, <span class="ruby-keyword kw">true</span>, <span class="ruby-keyword kw">true</span>) ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="reversed-method" class="method-detail ">
+        <a name="method-i-reversed"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">reversed</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Returns a new interval with the sentinels reversed.
+</p>
+<pre>
+  (0..10).reversed  #=&gt; 10..0</pre>
+          
+
+          
+          <div class="method-source-code"
+            id="reversed-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/interval.rb, line 169</span>
+169:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">reversed</span>
+170:     <span class="ruby-constant">Interval</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@last</span>, <span class="ruby-ivar">@first</span>, <span class="ruby-keyword kw">true</span>, <span class="ruby-keyword kw">true</span>)
+171:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="sentinels-method" class="method-detail ">
+        <a name="method-i-sentinels"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">sentinels</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Returns a two element array of first and last sentinels.
+</p>
+<pre>
+ (0..10).sentinels   #=&gt; [0,10]</pre>
+          
+
+          
+          <div class="method-source-code"
+            id="sentinels-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/interval.rb, line 108</span>
+108:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sentinels</span>
+109:     <span class="ruby-keyword kw">return</span> [<span class="ruby-ivar">@first</span>, <span class="ruby-ivar">@last</span>]
+110:   <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="size-method" class="method-detail method-alias">
+        <a name="method-i-size"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">size</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="step-method" class="method-detail method-alias">
+        <a name="method-i-step"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">step</span><span
+            class="method-args">(n=1, d=nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="--method" class="method-detail ">
+        <a name="method-i-%7E"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">~</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/euclid/interval.rb, line 163</span>
+163:   <span class="ruby-keyword kw">def</span> <span class="ruby-operator">~</span> ; <span class="ruby-constant">Interval</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>, <span class="ruby-keyword kw">true</span>, <span class="ruby-keyword kw">true</span>) ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+    </div>
+  
+
+  </div>
+
+
+  <div id="rdoc-debugging-section-dump" class="debugging-section">
+  
+    <p>Disabled; run with --debug to generate this.</p>
+  
+  </div>
+
+</main>
+</body>
+</html>
+
